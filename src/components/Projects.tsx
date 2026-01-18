@@ -49,7 +49,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'Employee Management System',
-      description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend and backend are deployed on **Render** as separate services, following modern cloud deployment practices with secure REST API communication. This project demonstrates strong full-stack development skills, RESTful API design, and real-world deployment experience.',
+      description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend and backend are deployed on Render as separate services, following modern cloud deployment practices with secure REST API communication. This project demonstrates strong full-stack development skills, RESTful API design, and real-world deployment experience.',
       image: '/employee.png',
       technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST API', 'Postman', 'AI Assistant'],
       githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git'
@@ -66,7 +66,7 @@ const Projects = () => {
       title: 'KairoAI Chatbot',
       description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. The frontend is deployed on Vercel and the backend on Render.',
       image: '/ai.mp4',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Groq API'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Groq API', 'Gemini API'],
       githubUrl: 'https://github.com/Vaibhavsable451/AiChatbotProject.git'
     },
 

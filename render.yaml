@@ -3,4 +3,4 @@ services:
     name: portfolio
     env: static
     buildCommand: npm install && npm run build
-    publishPath: out
+    publishPath: build
