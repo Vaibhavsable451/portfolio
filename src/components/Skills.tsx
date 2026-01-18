@@ -47,16 +47,7 @@ const Skills = () => {
         { name: 'Github', level: 95 }, 
       ],
     },
-    {
-      icon: <FiTool />,
-      title: 'Artificial Intelligence & Automation',
-      skills: [
-        { name: 'AI Integration & Automation', level: 87 },
-        { name: 'AI Agent Development(LangChain, Gemini API, OpenAI API)', level: 90 },
-        { name: 'No-Code Workflow Automation (n8n)', level: 70 },
-        
-      ],
-    },
+    
   ];
 
   return (

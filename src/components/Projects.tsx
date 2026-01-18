@@ -47,115 +47,29 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor.git',    
     },
     {
-      id: 2, 
-      title: 'Maze Bank Desktop Application',
-      description: 'A desktop banking application built with JavaFX that provides features like account management, transactions, income and expenses summary, and secure money transfer. The application includes a modern responsive UI, real-time account updates, and profile management for users.',
-      images: ['/javafx.png', '/javafx2.png'],
-      technologies: ['Java', 'JavaFX', 'Scene Builder', 'CSS', 'FXML'],
-      githubUrl: 'https://github.com/Vaibhavsable451/MazeBank.git',
+      id: 2,
+      title: 'Employee Management System',
+      description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend and backend are deployed on **Render** as separate services, following modern cloud deployment practices with secure REST API communication. This project demonstrates strong full-stack development skills, RESTful API design, and real-world deployment experience.',
+      image: '/employee.png',
+      technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST API', 'Postman', 'AI Assistant'],
+      githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git'
     },
     {
-  id: 3,
-  title: 'Employee Management System',
-  description:
-    'A full-stack Employee Management System upgraded with an intelligent AI Assistant powered by Google Gemini API. The AI agent enables HR admins to ask natural language questions such as “Who joined this month?”, “Show employees with pending appraisals”, or “List all developers in the Pune branch.” It automates data retrieval, report summaries, and smart insights directly from the database. The system uses React (Hooks) for the frontend, Spring Boot for RESTful APIs, and MySQL for storage, with Postman for API validation and testing.',
-  image: '/employee.png',
-  technologies: [
-    'Java',
-    'Spring Boot',
-    'React',
-    'React Hooks',
-    'MySQL',
-    'REST API',
-    'Postman',
-    'Google Gemini API',
-    'AI Assistant'
-  ],
-  githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git'
-},
-    {
-      id: 4,
-      title: 'Production-Ready SaaS POS Platform',
-      description: 'A production-ready SaaS Point of Sale (POS) system featuring both light and dark themes. The platform includes two main interfaces: Order of Sales (OOS) and Point of Sale (POS), each with dedicated light and dark mode options. The theme toggle allows users to switch between modes based on their lighting conditions and preferences, ensuring optimal visibility and reduced eye strain during extended use.',
-      images: ['/oos.png', '/pos.png'],
-      technologies: [
-        'React', 
-        'Shadcn UI', 
-        'Tailwind CSS', 
-        'Redux Toolkit', 
-        'Spring Boot', 
-        'JPA/Hibernate', 
-        'MySQL',
-        'JWT Auth & RBAC',
-        'Stripe',
-        'Razorpay',
-        'Cloudinary',
-        'Axios'
-      ]
-    },
-    {
-      id: 5,
-      title: 'AI-Powered Fitness App with Spring Boot Microservices',
-      description: 'A full-stack AI-driven fitness application built with Spring Boot, Kafka, Keycloak, OAuth2, and React/Angular. Features include user management, activity tracking, AI-powered recommendations, event-driven communication, service discovery, API gateway, and secure authentication — a real-world enterprise-grade project for learning and resumes.',
+      id: 3,
+      title: 'AI-Powered Fitness App',
+      description: 'A full-stack AI-driven fitness application built with Spring Boot microservices, Kafka, Keycloak, and React. Features include user activity tracking, AI-powered recommendations, event-driven communication, and secure OAuth2 authentication.',
       image: '/fitness-app.png',
-      technologies: ['Java', 'Spring Boot', 'Kafka', 'Keycloak', 'OAuth2', 'React', 'Angular', 'MongoDB', 'MySQL', 'REST API'],
+      technologies: ['Java', 'Spring Boot', 'Kafka', 'Keycloak', 'OAuth2', 'React', 'MongoDB', 'MySQL'],
       githubUrl: 'https://github.com/Vaibhavsable451/AI-Powered-Fitness-App-With-Spring-Boot-Microservices'
-    },
-    {
-      id: 6,
-      title: 'AI Chat Agent with Groq & n8n',
-      description: 'Developed an AI-powered chat agent using Groq AI models integrated with n8n for workflow automation. Implemented real-time chat response handling with context-aware processing. Created a simple yet effective memory system within n8n to maintain conversation context without Python dependencies. The solution features seamless integration of AI model APIs and custom workflow automation for efficient chat processing.',
-      image: '/AiAgent.png',
-      technologies: ['Groq AI', 'n8n', 'API Integration', 'Workflow Automation', 'JavaScript', 'Chat Processing']
-    },
-    {
-      id: 7,
-      title: 'AI-Powered Automated Image Editor Agent | Fal AI Nano-Banana + n8n',
-      description: 'Created a fully automated image editor agent that executes end-to-end workflows in n8n. The solution can open forms, accept prompts & image uploads, process images using the Nano Banana model, and deliver AI-edited results seamlessly. Features a user-friendly interface for submitting editing requests and viewing processed images.',
-      image: '/aiagent.mp4',
-      technologies: ['n8n', 'Fal AI', 'Nano Banana Model', 'Workflow Automation', 'Image Processing', 'API Integration']
-    },
-
-    {id: 8,
-      title: 'AI Chatbot Assistant',
-      description: 'An intelligent and fully interactive chatbot built using HTML, CSS, and JavaScript, integrating Groq, Gemini, and APIs for ultra-fast, accurate responses. The system supports real-time messaging, text + image input, and includes AI voice features for speaking replies aloudThe UI includes 8 modern themes (Dark, Light, Neon, Sunset, Ocean, Forest, Purple, Minimal),  a clean, responsive interface designed for a personal AI assistant experience. The chatbot delivers contextual answers, executes searches, explains results, and adapts based on user interactionsAdvanced features include optional subscription-style premium modes like higher message limits, fast GROQ inference, and AI voice output, enhancing the overall user engagement and assistant-like behavior.The project is fully deployed on Netlify, enabling fast global access, seamless hosting, and automatic CI/CD deployment from GitHub for smooth updates.',
+    },    {
+      id: 4,
+      title: 'KairoAI Chatbot',
+      description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. The frontend is deployed on Vercel and the backend on Render.',
       image: '/ai.mp4',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Gemini API', 'Groq API'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Groq API'],
       githubUrl: 'https://github.com/Vaibhavsable451/AiChatbotProject.git'
     },
-    { 
-      id: 9,
-      title: 'Job Hunter AI: Automated Job Hunting with n8n Workflow',
-      description: 'Job Hunter automatically scrapes or fetches job listings (e.g., from LinkedIn), extracts relevant data, uses Gemini AI to analyze them, stores the refined job list in Google Sheets, and sends Telegram notifications with top job opportunities — all on a recurring schedule.',
-      image: '/Hunter.mp4',
-      poster:'/Jobhunter.png',
-      technologies: ['n8n', 'Google Gemini', 'Google Sheets', 'Google Drive', 'HTTP Request', 'HTML Extract', 'JavaScript', 'Telegram', 'Schedule Trigger']
-    },
-    {
-      id: 10,
-      title: 'AI-Powered Conversational Chatbot (AgentX)',
-      description: 'Developed and deployed "Friday," a custom AI assistant powered by AgentX and Google Gemini 2.5 Pro enabling seamless integration with websites and chat applications—without the need for coding. Achieved a 30% increase in user engagement and reduced response latency by 40% through optimized agent concurrency. Implemented real-time analytics to enhance engagement, reliability, and API efficiency.',
-      image: '/AGENTXFRIDAy.mp4',
-      poster: '/AGENTXFRIDAy.png',
-      technologies: ['AgentX', 'Google Gemini 2.5 Pro', 'Real-time Analytics', 'API Integration']
-    },
-    {
-  id: 11,
-  title: 'AI-Powered Chatbot Integration (CertifyPro)',
-  description: `Built and integrated an AI chatbot “Nathan” for an online course website using Google Gemini AI and n8n. The bot offers 24/7 support, answers FAQs, retrieves course info from Google Sheets, and logs user queries automatically, reducing manual handling by 90% and boosting engagement.`,
-  image: '/Course.mp4',
-  poster: '/CertifyPro.png',
-  technologies: ['React.js', 'JavaScript', 'HTML', 'CSS', 'n8n', 'Google Gemini', 'Google Sheets']
-},
-{
-  id: 12,
-  title: 'Astra AI – Intelligent Conversational Assistant',
-  description: `I developed Astra AI, an intelligent conversational chatbot that delivers fast, accurate, and interactive responses through a sleek, futuristic, fully responsive interface. It includes eight beautiful themes, multilingual support (English, Marathi, Hindi), and secure encrypted chat handling. Astra AI integrates Groq and Google Gemini APIs using protected API keys, provides chat history with view/delete options, and supports quick “New Chat” creation. It also features polished authentication flows (Sign Up / Sign In) with SQL-based storage for users, sessions, and security. Built using React/Next.js and Tailwind, Astra AI is a production-ready, highly customizable assistant designed for productivity, creativity, and everyday use.`,
-  image: '/AstraAI.mp4',
-  poster: '/AstraAI.png',
-  technologies: ['React.js', 'Next.js', 'JavaScript', 'Tailwind CSS', 'Groq', 'Google Gemini', 'SQL'],
-  githubUrl: 'https://github.com/Vaibhavsable451/Astra-AI-Intelligent-Conversational-Assistant.git'
-}
+
 
 
 
@@ -219,7 +133,7 @@ const Projects = () => {
                           <video 
                             className="w-full h-full object-cover"
                             src={project.image}
-                            poster={project.poster || (project.id === 7 ? '/agent.png' : '/ai.png')}
+                            poster={project.poster || '/ai.png'}
                             autoPlay
                             muted
                             loop

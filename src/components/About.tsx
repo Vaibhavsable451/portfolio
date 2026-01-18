@@ -61,11 +61,7 @@ const About = () => {
                 title="Database"
                 description="MySQL, Database Design, SQL Queries, and Data Modeling for efficient data management."
               />
-              <FeatureCard 
-                icon={<FiDatabase />}
-                title="Artificial Intelligence & Automation"
-                description="AI Integration & Automation,AI Agent Development (LangChain, Gemini API, OpenAI API),No-Code Workflow Automation (n8n)."
-              />
+              
             </div>
           </motion.div>
         </div>
