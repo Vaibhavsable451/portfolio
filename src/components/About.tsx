@@ -14,9 +14,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-  I&apos;m an MCA (Master of Computer Applications) postgraduate and a passionate Java Backend Developer. 
-  I have hands-on experience with Java, Spring Boot, and building scalable, secure, and high-performance backend applications. 
-  I&apos;m eager to contribute my skills to developing robust APIs and enterprise-grade systems.
+ I’m an MCA (Master of Computer Applications) postgraduate and a passionate Software Engineer, specializing in Java backend development. I have hands-on experience using Java and Spring Boot to build scalable, secure, and high-performance backend applications, and I’m eager to contribute as a Software Engineer by developing robust APIs and enterprise-grade systems.
 </p>
 
         </motion.div>
@@ -33,8 +31,7 @@ const About = () => {
               My Expertise
             </h3>
            <p className="text-gray-300 mb-6">
-  As an MCA postgraduate, I&apos;ve developed expertise in backend development. 
-  Through my academic projects and coursework, I&apos;ve gained hands-on experience with Java, Spring Boot, and related technologies to build scalable and secure backend applications.
+ As an MCA postgraduate and Software Engineer, I have developed strong expertise in backend development. Through academic projects and coursework, I have gained hands-on experience using Java, Spring Boot, and related technologies to build scalable, secure, and production-ready backend applications.
 </p>
 
             <p className="text-gray-300">
