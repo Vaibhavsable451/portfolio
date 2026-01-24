@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase } from 'react-icons/fi';
+import { FiCode, FiDatabase,FiMonitor } from 'react-icons/fi';
 
 const About = () => {
   return (
@@ -55,7 +55,12 @@ const About = () => {
                 title="Backend Development"
                 description="Java, Spring Boot, RESTful APIs, Microservices, Hibernate, and server-side application development."
               />
-           
+             <FeatureCard 
+      icon={<FiMonitor />}
+           title="Frontend Development"
+  description="HTML5, CSS3, JavaScript, and React.js for building responsive, interactive, and user-friendly web interfaces."
+/>
+
               <FeatureCard 
                 icon={<FiDatabase />}
                 title="Database"

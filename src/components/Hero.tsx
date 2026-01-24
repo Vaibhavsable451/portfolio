@@ -63,11 +63,11 @@ const Hero = () => {
                 Vaibhav Sable
               </span>
               <span className="block text-2xl md:text-3xl text-gray-300 mt-4">
-               Java Developer
+               Software Engineer
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              I build efficient, scalable, and user-friendly applications using modern Java technologies. Specializing in backend solutions to deliver high-performance and robust digital experiences.
+              Software Engineer skilled in building efficient, scalable, and user-friendly applications using Java and React.js, specializing in high-performance backend solutions and responsive user interfaces.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
