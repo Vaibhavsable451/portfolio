@@ -13,6 +13,8 @@ interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  frontendUrl?: string;
+  backendUrl?: string;
 }
 
 const Projects = () => {
@@ -44,7 +46,10 @@ const Projects = () => {
       description: 'A full-stack e-commerce platform with multi-role support (Admin, Seller, User) featuring JWT authentication, OTP verification, and responsive MUI/Tailwind design. Includes AI chatbot support and integrates Stripe/Razorpay payments.',
       image: '/muti vendor ecommerce platform.png',
       technologies: ['Spring Boot', 'React', 'TypeScript', 'Redux Toolkit', 'MySQL', 'JWT', 'Tailwind CSS', 'MUI', 'Formik', 'Axios', 'Stripe', 'Razorpay', 'Gemini API'],
-      githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor.git',    
+      githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor.git',
+      liveUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
+      frontendUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
+      backendUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
     },
     {
       id: 2,
@@ -52,7 +57,10 @@ const Projects = () => {
       description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend and backend are deployed on Render as separate services, following modern cloud deployment practices with secure REST API communication. This project demonstrates strong full-stack development skills, RESTful API design, and real-world deployment experience.',
       image: '/employee.png',
       technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST API', 'Postman', 'AI Assistant'],
-      githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git'
+      githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git',
+      frontendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
+      backendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
+      liveUrl: 'https://employee-management-system-1-dg6r.onrender.com/'
     },
     {
       id: 3,
@@ -64,10 +72,13 @@ const Projects = () => {
     },    {
       id: 4,
       title: 'KairoAI Chatbot',
-      description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. The frontend is deployed on Vercel and the backend on Render.',
+      description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. The frontend (HTML/CSS/JavaScript) is deployed on Render and the backend (Node.js) on Vercel.',
       image: '/ai.mp4',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Groq API', 'Gemini API'],
-      githubUrl: 'https://github.com/Vaibhavsable451/AiChatbotProject.git'
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Groq API'],
+      githubUrl: 'https://github.com/Vaibhavsable451/Ai-Chatbot.git',
+      frontendUrl: 'https://kairochatbot.onrender.com/',
+      backendUrl: 'https://kairochatbot.onrender.com/',
+      liveUrl: 'https://kairochatbot.onrender.com/'
     },
 
 
@@ -212,25 +223,39 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-4">
-                  {project.githubUrl && (
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center text-white hover:text-blue-400 transition-colors"
-                    >
-                      <FiGithub className="mr-2" /> View Code
-                    </a>
-                  )}
+                <div className="flex flex-wrap gap-3 items-center">
                   {project.liveUrl && (
                     <a 
                       href={project.liveUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center text-white hover:text-blue-400 transition-colors"
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-gray-900 transition-colors font-medium whitespace-nowrap"
                     >
                       <FiExternalLink className="mr-2" /> Live Demo
+                    </a>
+                  )}
+                  {project.backendUrl && (
+                    <span
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-600/20 text-yellow-500 border border-yellow-600/50 font-medium whitespace-nowrap cursor-default"
+                    >
+                      Backend (Render)
+                    </span>
+                  )}
+                  {project.frontendUrl && (
+                    <span
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-600/20 text-yellow-500 border border-yellow-600/50 font-medium whitespace-nowrap cursor-default"
+                    >
+                      Frontend (Render)
+                    </span>
+                  )}
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-gray-700 hover:bg-gray-600 text-white transition-colors whitespace-nowrap"
+                    >
+                      <FiGithub className="mr-2" /> View Code
                     </a>
                   )}
                 </div>
