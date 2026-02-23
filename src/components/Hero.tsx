@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
+import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { useEffect } from "react";
 
 const Hero = () => {
@@ -19,6 +20,7 @@ const Hero = () => {
       }
     };
   }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -59,29 +61,69 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="block">Hi, I&apos;m</span>
-              <span className="text-blue-400">
-                Vaibhav Sable
-              </span>
+              <span className="text-blue-400">Vaibhav Sable</span>
               <span className="block text-2xl md:text-3xl text-gray-300 mt-4">
-               Software Engineer
+                Software Engineer
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Software Engineer skilled in building efficient, scalable, and user-friendly applications using Java and React.js, specializing in high-performance backend solutions and responsive user interfaces.
+              Software Engineer skilled in building efficient, scalable, and
+              user-friendly applications using Java and React.js, specializing
+              in high-performance backend solutions and responsive user
+              interfaces.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors"
-              >
-                Get in Touch
-              </a>
-              <a
-                href="#projects"
-                className="px-8 py-3 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 font-medium rounded-full transition-colors"
-              >
-                View Projects
-              </a>
+
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors"
+                >
+                  Get in Touch
+                </a>
+                <a
+                  href="#projects"
+                  className="px-8 py-3 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 font-medium rounded-full transition-colors"
+                >
+                  View Projects
+                </a>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://www.linkedin.com/in/vaibhav-sable-59b56827a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-blue-900/20 backdrop-blur-sm"
+                >
+                  <FaLinkedin className="text-blue-500 text-xl" />
+                  LinkedIn
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://github.com/Vaibhavsable451"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-gray-400 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-white/5 backdrop-blur-sm"
+                >
+                  <FaGithub className="text-white text-xl" />
+                  GitHub
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://drive.google.com/file/d/1ZJL6RivMiZ0Zzq7IKmV4OPhU6aQa4OsQ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-emerald-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-emerald-900/20 backdrop-blur-sm"
+                >
+                  <FaFileAlt className="text-emerald-500 text-xl" />
+                  Resume
+                </motion.a>
+              </div>
             </div>
           </motion.div>
 
