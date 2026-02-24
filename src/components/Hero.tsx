@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiArrowDown } from "react-icons/fi";
+import { FiArrowDown, FiGlobe } from "react-icons/fi";
 import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { useEffect } from "react";
 
@@ -122,6 +122,17 @@ const Hero = () => {
                 >
                   <FaFileAlt className="text-emerald-500 text-xl" />
                   Resume
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://vaibhavsable-klzmwv1.gamma.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-purple-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-purple-900/20 backdrop-blur-sm"
+                >
+                  <FiGlobe className="text-purple-500 text-xl" />
+                  My Profile
                 </motion.a>
               </div>
             </div>
