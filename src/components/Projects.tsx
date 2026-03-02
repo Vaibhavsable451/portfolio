@@ -89,6 +89,23 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Job-Finder-AI-Agent.git',
      
     },
+    {
+  id: 6,
+title: "JARVIS – Real-Time AI Personal Assistant",
+description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
+image: "/jarvis-ai.png",
+technologies: [
+"Python",
+"AsyncIO",
+"OpenAI API",
+"Gemini API",
+"Windows Automation",
+"Keyboard Automation",
+"Mouse Automation",
+"JSON Storage"
+],
+githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-Assistant.git"
+}
 
 
 
