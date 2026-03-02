@@ -85,7 +85,7 @@ const Projects = () => {
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
       poster: '/JobFinderAi.png',
-      technologies: ['n8n', 'Groq LLM', 'AI Agent', 'Google Sheets', 'Telegram Bot', 'Node.js', 'Automation'],
+      technologies: ['n8n', 'Groq LLM', 'AI Agent', 'Google Sheets', 'Telegram Bot', 'Automation'],
       githubUrl: 'https://github.com/Vaibhavsable451/Job-Finder-AI-Agent.git',
      
     },
