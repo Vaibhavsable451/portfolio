@@ -2,6 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiArrowDown, FiGlobe } from "react-icons/fi";
 import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { useEffect } from "react";
 
 const Hero = () => {
@@ -133,6 +134,17 @@ const Hero = () => {
                 >
                   <FiGlobe className="text-purple-500 text-xl" />
                   My Profile
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://leetcode.com/u/vaibhavsable122/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-orange-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-orange-900/20 backdrop-blur-sm"
+                >
+                  <SiLeetcode className="text-orange-500 text-xl" />
+                  LeetCode
                 </motion.a>
               </div>
             </div>
