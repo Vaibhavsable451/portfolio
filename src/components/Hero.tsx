@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiArrowDown, FiGlobe } from "react-icons/fi";
-import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFileAlt, FaEnvelopeOpenText } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { useEffect } from "react";
 
@@ -97,9 +97,9 @@ const Hero = () => {
                   href="https://www.linkedin.com/in/vaibhav-sable-59b56827a/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-blue-900/20 backdrop-blur-sm"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
                 >
-                  <FaLinkedin className="text-blue-500 text-xl" />
+                  <FaLinkedin className="text-yellow-500 text-xl" />
                   LinkedIn
                 </motion.a>
                 <motion.a
@@ -108,9 +108,9 @@ const Hero = () => {
                   href="https://github.com/Vaibhavsable451"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-gray-400 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-white/5 backdrop-blur-sm"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
                 >
-                  <FaGithub className="text-white text-xl" />
+                  <FaGithub className="text-yellow-500 text-xl" />
                   GitHub
                 </motion.a>
                 <motion.a
@@ -119,9 +119,9 @@ const Hero = () => {
                   href="https://drive.google.com/file/d/1ZJL6RivMiZ0Zzq7IKmV4OPhU6aQa4OsQ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-emerald-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-emerald-900/20 backdrop-blur-sm"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
                 >
-                  <FaFileAlt className="text-emerald-500 text-xl" />
+                  <FaFileAlt className="text-yellow-500 text-xl" />
                   Resume
                 </motion.a>
                 <motion.a
@@ -130,9 +130,9 @@ const Hero = () => {
                   href="https://vaibhavsable-klzmwv1.gamma.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-purple-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-purple-900/20 backdrop-blur-sm"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
                 >
-                  <FiGlobe className="text-purple-500 text-xl" />
+                  <FiGlobe className="text-yellow-500 text-xl" />
                   My Profile
                 </motion.a>
                 <motion.a
@@ -141,10 +141,21 @@ const Hero = () => {
                   href="https://leetcode.com/u/vaibhavsable122/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-orange-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-orange-900/20 backdrop-blur-sm"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
                 >
-                  <SiLeetcode className="text-orange-500 text-xl" />
+                  <SiLeetcode className="text-yellow-500 text-xl" />
                   LeetCode
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://drive.google.com/file/d/1SLp0nPhB9RmCznY36Bd0jiJ99vKnm1cK/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
+                >
+                  <FaEnvelopeOpenText className="text-yellow-500 text-xl" />
+                  Cover Letter
                 </motion.a>
               </div>
             </div>
