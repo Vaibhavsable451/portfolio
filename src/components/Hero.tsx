@@ -149,7 +149,7 @@ const Hero = () => {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://drive.google.com/file/d/1SLp0nPhB9RmCznY36Bd0jiJ99vKnm1cK/view"
+                  href="https://drive.google.com/file/d/1maTsxXwWSjsvD2IeSiq08UpIIXeGLXpx/edit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
