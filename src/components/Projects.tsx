@@ -54,11 +54,11 @@ const Projects = () => {
     {
       id: 2,
       title: 'Employee Management System',
-      description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend and backend are deployed on Render as separate services, following modern cloud deployment practices with secure REST API communication. This project demonstrates strong full-stack development skills, RESTful API design, and real-world deployment experience.',
+      description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend is deployed on Vercel and the backend is on Render, following modern cloud deployment practices with secure REST API communication.',
       image: '/employee.png',
       technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST API', 'Postman', 'AI Assistant'],
       githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git',
-      frontendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
+      frontendUrl: 'https://employee-management-system-blond-eight.vercel.app/',
       backendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
       liveUrl: 'https://employee-management-system-blond-eight.vercel.app/'
     },
@@ -72,12 +72,12 @@ const Projects = () => {
     },    {
       id: 4,
       title: 'KairoAI Chatbot',
-      description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. The frontend (HTML/CSS/JavaScript) is deployed on Render and the backend (Node.js) on Vercel.',
+      description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. Both the frontend and backend are deployed on Vercel.',
       image: '/ai.mp4',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Groq API'],
       githubUrl: 'https://github.com/Vaibhavsable451/Ai-Chatbot.git',
-      frontendUrl: 'https://kairochatbot.onrender.com/',
-      backendUrl: 'https://kairochatbot.onrender.com/',
+      frontendUrl: 'https://pl-tawny-one.vercel.app/',
+      backendUrl: 'https://pl-tawny-one.vercel.app/',
       liveUrl: 'https://pl-tawny-one.vercel.app/'
     },{
       id: 5,
@@ -90,23 +90,23 @@ const Projects = () => {
      
     },
     {
-  id: 6,
-title: "Spring AI-Build Generative AI application Chatbot with Spring AI,React JS, GROQ API,LLM",
-description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. The project demonstrates practical knowledge of Generative AI application development, Java backend engineering, React frontend design, and LLM-based chatbot integration using Groq APIs.",
-image: "/pari.png",
-technologies: [
-"Java",
-"Spring Boot",
-"React",
-"Groq API",
-"LLM",
-"spring ai"
-],
-githubUrl: "https://github.com/Vaibhavsable451/Spring-AI-Build-Generative-AI-application-.git",
-frontendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
- backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
- liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
-},
+      id: 6,
+      title: "Spring AI Chatbot",
+      description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. Both the frontend and backend are deployed on Render.",
+      image: "/pari.png",
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "React",
+        "Groq API",
+        "LLM",
+        "spring ai"
+      ],
+      githubUrl: "https://github.com/Vaibhavsable451/Spring-AI-Build-Generative-AI-application-.git",
+      frontendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
+      backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
+      liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
+    },
 
 {
 id: 7,
@@ -137,8 +137,12 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 bg-gray-950 overflow-hidden relative">
+      {/* Background blobs for 3D depth feel */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] translate-y-1/2"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={isClient ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
@@ -164,8 +168,12 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
               viewport={{ once: true, margin: "-100px" }}
               className={`flex flex-col w-full ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-4 md:gap-10 items-center`}
             >
-              <div className="w-full lg:w-1/2 relative overflow-hidden rounded-lg shadow-lg group mx-auto max-w-2xl" onClick={() => project.image?.endsWith('.mp4') && handleVideoToggle(project.image)}>
-                <div className="relative aspect-video w-full overflow-hidden bg-gray-700">
+              <motion.div 
+                className="w-full lg:w-1/2 relative overflow-hidden rounded-2xl shadow-2xl group mx-auto max-w-2xl border border-white/10 backdrop-blur-md bg-white/5 transform-gpu transition-all duration-500 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/20"
+                whileHover={{ y: -5 }}
+                onClick={() => project.image?.endsWith('.mp4') && handleVideoToggle(project.image)}
+              >
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-900/40">
                   {project.images ? (
                     <div className="relative w-full h-full">
                       {project.images.map((img, idx) => (
@@ -203,9 +211,9 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                           alt={project.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          style={{ objectFit: 'cover' }}
-                          className={`transition-transform duration-500 group-hover:scale-110 ${project.image?.endsWith('.mp4') ? 'cursor-pointer' : ''}`}
-                          priority={index < 2}
+                          style={{ objectFit: project.id === 6 ? 'contain' : 'cover' }}
+                          className={`transition-transform duration-500 group-hover:scale-105 ${project.image?.endsWith('.mp4') ? 'cursor-pointer' : ''}`}
+                          priority={index < 2 || project.id === 6}
                         />
                       )}
                       {project.image?.endsWith('.mp4') && (
@@ -223,7 +231,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                       )}
                     </>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-6 w-full">
                       <div className="flex justify-end space-x-4">
                         {project.githubUrl && (
@@ -231,7 +239,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                             href={project.githubUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-white hover:text-blue-400 transition-colors"
+                            className="text-white hover:text-blue-400 transform hover:scale-125 transition-all shadow-lg"
                           >
                             <FiGithub size={24} />
                           </a>
@@ -241,7 +249,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                             href={project.liveUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-white hover:text-blue-400 transition-colors"
+                            className="text-white hover:text-blue-400 transform hover:scale-125 transition-all shadow-lg"
                           >
                             <FiExternalLink size={24} />
                           </a>
@@ -250,7 +258,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               
               <div className="lg:w-1/2">
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -282,16 +290,16 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                   )}
                   {project.backendUrl && (
                     <span
-                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-600/20 text-yellow-500 border border-yellow-600/50 font-medium whitespace-nowrap cursor-default"
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-green-600/20 text-green-400 border border-green-600/50 font-medium whitespace-nowrap cursor-default shadow-[0_0_15px_rgba(34,197,94,0.1)]"
                     >
-                      Backend (Render)
+                      Backend ({project.id === 4 ? 'Vercel' : 'Render'})
                     </span>
                   )}
                   {project.frontendUrl && (
                     <span
-                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-600/20 text-yellow-500 border border-yellow-600/50 font-medium whitespace-nowrap cursor-default"
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-purple-600/20 text-purple-400 border border-purple-600/50 font-medium whitespace-nowrap cursor-default shadow-[0_0_15px_rgba(168,85,247,0.1)]"
                     >
-                      Frontend (Render)
+                      Frontend ({project.id === 2 || project.id === 4 ? 'Vercel' : 'Render'})
                     </span>
                   )}
                   {project.githubUrl && (
