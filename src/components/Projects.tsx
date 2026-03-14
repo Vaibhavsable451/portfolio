@@ -47,9 +47,9 @@ const Projects = () => {
       image: '/muti vendor ecommerce platform.png',
       technologies: ['Spring Boot', 'React', 'TypeScript', 'Redux Toolkit', 'MySQL', 'JWT', 'Tailwind CSS', 'MUI', 'Formik', 'Axios', 'Stripe', 'Razorpay', 'Gemini API'],
       githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor.git',
-      liveUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
-      frontendUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
-      backendUrl: 'https://ecommerce-multivendor-37j4.onrender.com/',
+      liveUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
+      frontendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
+      backendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System.git',
       frontendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
       backendUrl: 'https://employee-management-system-1-dg6r.onrender.com/',
-      liveUrl: 'https://employee-management-system-1-dg6r.onrender.com/'
+      liveUrl: 'https://employee-management-system-blond-eight.vercel.app/'
     },
     {
       id: 3,
@@ -78,7 +78,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Ai-Chatbot.git',
       frontendUrl: 'https://kairochatbot.onrender.com/',
       backendUrl: 'https://kairochatbot.onrender.com/',
-      liveUrl: 'https://kairochatbot.onrender.com/'
+      liveUrl: 'https://pl-tawny-one.vercel.app/'
     },{
       id: 5,
       title: 'JOB FINDER AI AGENT',
@@ -91,6 +91,25 @@ const Projects = () => {
     },
     {
   id: 6,
+title: "Spring AI-Build Generative AI application Chatbot with Spring AI,React JS, GROQ API,LLM",
+description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. The project demonstrates practical knowledge of Generative AI application development, Java backend engineering, React frontend design, and LLM-based chatbot integration using Groq APIs.",
+image: "/pari.png",
+technologies: [
+"Java",
+"Spring Boot",
+"React",
+"Groq API",
+"LLM",
+"spring ai"
+],
+githubUrl: "https://github.com/Vaibhavsable451/Spring-AI-Build-Generative-AI-application-.git",
+frontendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
+ backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
+ liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
+},
+
+{
+id: 7,
 title: "JARVIS – Real-Time AI Personal Assistant",
 description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
 image: "/jarvis-ai.png",
@@ -105,7 +124,8 @@ technologies: [
 "JSON Storage"
 ],
 githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-Assistant.git"
-}
+},
+
 
 
 
