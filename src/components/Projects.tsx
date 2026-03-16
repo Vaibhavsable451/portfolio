@@ -107,9 +107,31 @@ const Projects = () => {
       backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
       liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
     },
-   
     {
       id: 7,
+      title: 'Job Mail AI Tracker',
+      description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
+      image: '/ds.mp4',
+      poster: '/ds.png',
+      technologies: ['n8n', 'Groq LLM', 'Gmail API', 'Google Sheets', 'AI Classifier', 'Automation'],
+
+
+    },
+     {
+      id: 8,
+      title: 'Job Finder AI Agent',
+      description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
+      image: '/fddd.mp4',
+      poster: '/fddd.png',
+      technologies: ['n8n', 'Groq LLM', 'Google Gemini', 'Gmail API', 'Google Docs', 'Apify', 'Automation'],
+
+
+    },
+
+
+   
+    {
+      id: 9,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
