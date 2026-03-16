@@ -69,7 +69,7 @@ const Projects = () => {
       image: '/fitness-app.png',
       technologies: ['Java', 'Spring Boot', 'Kafka', 'Keycloak', 'OAuth2', 'React', 'MongoDB', 'MySQL'],
       githubUrl: 'https://github.com/Vaibhavsable451/AI-Powered-Fitness-App-With-Spring-Boot-Microservices'
-    },    {
+    }, {
       id: 4,
       title: 'KairoAI Chatbot',
       description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. Both the frontend and backend are deployed on Vercel.',
@@ -79,7 +79,7 @@ const Projects = () => {
       frontendUrl: 'https://pl-tawny-one.vercel.app/',
       backendUrl: 'https://pl-tawny-one.vercel.app/',
       liveUrl: 'https://pl-tawny-one.vercel.app/'
-    },{
+    }, {
       id: 5,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
@@ -87,7 +87,7 @@ const Projects = () => {
       poster: '/JobFinderAi.png',
       technologies: ['n8n', 'Groq LLM', 'AI Agent', 'Google Sheets', 'Telegram Bot', 'Automation'],
       githubUrl: 'https://github.com/Vaibhavsable451/Job-Finder-AI-Agent.git',
-     
+
     },
     {
       id: 6,
@@ -107,33 +107,53 @@ const Projects = () => {
       backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
       liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
     },
-
-{
-id: 7,
-title: "JARVIS – Real-Time AI Personal Assistant",
-description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
-image: "/jarvis-ai.png",
-technologies: [
-"Python",
-"AsyncIO",
-"OpenAI API",
-"Gemini API",
-"Windows Automation",
-"Keyboard Automation",
-"Mouse Automation",
-"JSON Storage"
-],
-githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-Assistant.git"
-},
+    {
+      id: 7,
+      title: 'Job Mail AI Tracker',
+      description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
+      image: '/Rejection mail.mp4',
+      poster: '/Rejection.png',
+      technologies: ['n8n', 'Groq LLM', 'Gmail API', 'Google Sheets', 'AI Classifier', 'Automation'],
 
 
+    },
+    {
+      id: 8,
+      title: 'Job Finder AI Agent',
+      description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
+      image: '/Hg.mp4',
+      poster: '/hg.png',
+      technologies: ['n8n', 'Groq LLM', 'Google Gemini', 'Gmail API', 'Google Docs', 'Apify', 'Automation'],
+
+
+    },
+
+    {
+      id: 9,
+      title: "JARVIS – Real-Time AI Personal Assistant",
+      description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
+      image: "/jarvis-ai.png",
+      technologies: [
+        "Python",
+        "AsyncIO",
+        "OpenAI API",
+        "Gemini API",
+        "Windows Automation",
+        "Keyboard Automation",
+        "Mouse Automation",
+        "JSON Storage"
+      ],
+      githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-Assistant.git"
+    },
 
 
 
 
 
-    
-    
+
+
+
+
   ];
 
   return (
@@ -141,7 +161,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
       {/* Background blobs for 3D depth feel */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] translate-y-1/2"></div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={isClient ? { opacity: 0, y: 20 } : false}
@@ -168,7 +188,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
               viewport={{ once: true, margin: "-100px" }}
               className={`flex flex-col w-full ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-4 md:gap-10 items-center`}
             >
-              <motion.div 
+              <motion.div
                 className="w-full lg:w-1/2 relative overflow-hidden rounded-2xl shadow-2xl group mx-auto max-w-2xl border border-white/10 backdrop-blur-md bg-white/5 transform-gpu transition-all duration-500 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/20"
                 whileHover={{ y: -5 }}
                 onClick={() => project.image?.endsWith('.mp4') && handleVideoToggle(project.image)}
@@ -177,8 +197,8 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                   {project.images ? (
                     <div className="relative w-full h-full">
                       {project.images.map((img, idx) => (
-                        <div 
-                          key={idx} 
+                        <div
+                          key={idx}
                           className={`absolute inset-0 transition-opacity duration-500 ${idx === 0 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
                         >
                           <Image
@@ -195,7 +215,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                     <>
                       {isClient && project.image?.endsWith('.mp4') ? (
                         <div className="relative w-full h-full">
-                          <video 
+                          <video
                             className="w-full h-full object-cover"
                             src={project.image}
                             poster={project.poster || '/ai.png'}
@@ -217,7 +237,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                         />
                       )}
                       {project.image?.endsWith('.mp4') && (
-                        <div 
+                        <div
                           className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
                           onClick={(e) => {
                             e.stopPropagation();
@@ -235,9 +255,9 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                     <div className="p-6 w-full">
                       <div className="flex justify-end space-x-4">
                         {project.githubUrl && (
-                          <a 
-                            href={project.githubUrl} 
-                            target="_blank" 
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-blue-400 transform hover:scale-125 transition-all shadow-lg"
                           >
@@ -245,9 +265,9 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                           </a>
                         )}
                         {project.liveUrl && (
-                          <a 
-                            href={project.liveUrl} 
-                            target="_blank" 
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-blue-400 transform hover:scale-125 transition-all shadow-lg"
                           >
@@ -259,7 +279,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                   </div>
                 </div>
               </motion.div>
-              
+
               <div className="lg:w-1/2">
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {project.title}
@@ -269,7 +289,7 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
                       className="px-3 py-1 bg-blue-900 text-blue-200 text-sm font-medium rounded-full"
                     >
@@ -279,9 +299,9 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                 </div>
                 <div className="flex flex-wrap gap-3 items-center">
                   {project.liveUrl && (
-                    <a 
-                      href={project.liveUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-gray-900 transition-colors font-medium whitespace-nowrap"
                     >
@@ -303,9 +323,9 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
                     </span>
                   )}
                   {project.githubUrl && (
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-gray-700 hover:bg-gray-600 text-white transition-colors whitespace-nowrap"
                     >
@@ -317,35 +337,35 @@ githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-As
             </motion.div>
           ))}
         </div>
-      
-      {/* Video Modal */}
-      {showVideo && selectedVideo && (
-        <div 
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => handleVideoToggle()}
-        >
-          <button 
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
-            onClick={(e) => {
-              e.stopPropagation();
-              handleVideoToggle();
-            }}
+
+        {/* Video Modal */}
+        {showVideo && selectedVideo && (
+          <div
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            onClick={() => handleVideoToggle()}
           >
-            <FiX className="w-8 h-8" />
-          </button>
-          <div className="w-full max-w-4xl" onClick={e => e.stopPropagation()}>
-            <video 
-              src={selectedVideo}
-              controls 
-              autoPlay 
-              className="w-full rounded-lg shadow-2xl"
-              key={selectedVideo}
-            />
+            <button
+              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleVideoToggle();
+              }}
+            >
+              <FiX className="w-8 h-8" />
+            </button>
+            <div className="w-full max-w-4xl" onClick={e => e.stopPropagation()}>
+              <video
+                src={selectedVideo}
+                controls
+                autoPlay
+                className="w-full rounded-lg shadow-2xl"
+                key={selectedVideo}
+              />
+            </div>
           </div>
-        </div>
-      )}
-    </div>
-  </section>
+        )}
+      </div>
+    </section>
   );
 };
 
