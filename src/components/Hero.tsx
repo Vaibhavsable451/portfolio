@@ -64,14 +64,11 @@ const Hero = () => {
               <span className="block">Hi, I&apos;m</span>
               <span className="text-blue-400">Vaibhav Sable</span>
               <span className="block text-2xl md:text-3xl text-gray-300 mt-4">
-                Software Engineer
+                Full Stack Engineer
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Software Engineer skilled in building efficient, scalable, and
-              user-friendly applications using Java and React.js, specializing
-              in high-performance backend solutions and responsive user
-              interfaces.
+              Full Stack Engineer specializing in Java · Spring Boot · Microservices and React.js — building secure, high-performance backend systems and responsive frontends. Delivered 20+ production APIs, event-driven architecture with Kafka, and AI-powered solutions that reduced customer support time by 35%.
             </p>
 
             <div className="flex flex-col gap-6">
