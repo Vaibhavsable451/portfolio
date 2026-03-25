@@ -92,7 +92,6 @@ const Projects = () => {
       liveUrl: 'https://3d-portfolio-website-kappa-kohl.vercel.app/'
 
     },
-
     {
       id: 6,
       title: 'AI Recruitment Email Intelligence Agent',
@@ -114,6 +113,26 @@ const Projects = () => {
 
     {
       id: 7,
+      title: 'Tech Release Monitoring Agent – Java & React (Groq AI + n8n)',
+      description: 'Tech Release Email Agent – Java & React (Groq AI + n8n) is an intelligent automation system that fetches the latest release information for Java and React from public APIs, processes and merges the data inside n8n, uses Groq LLM to generate concise technical summaries, and sends a formatted email notification through Gmail. The workflow is designed to help developers stay updated with important technology releases without manually checking changelogs and release pages.',
+      image: '/JavaTechRelease.mp4',
+      poster: '/JavaTech.png',
+      technologies: [
+        'n8n',
+        'Groq LLM API',
+        'Gmail API',
+        'GitHub API',
+        'Workflow Automation',
+        'JavaScript',
+        'Google Cloud',
+        'AI Summarization'
+      ],
+      githubUrl: 'https://github.com/Vaibhavsable451/Tech-Release-Email-Agent-Java-React-Groq-AI-n8n-.git',
+
+    },
+
+    {
+      id: 8,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
@@ -123,7 +142,7 @@ const Projects = () => {
 
     },
     {
-      id: 8,
+      id: 9,
       title: "Spring AI Chatbot",
       description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. Both the frontend and backend are deployed on Render.",
       image: "/pari.png",
@@ -141,7 +160,7 @@ const Projects = () => {
       liveUrl: 'https://aibuisl.vercel.app/'
     },
     {
-      id: 9,
+      id: 10,
       title: 'Job Mail AI Tracker',
       description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
       image: '/ds.mp4',
@@ -151,7 +170,7 @@ const Projects = () => {
 
     },
     {
-      id: 10,
+      id: 11,
       title: 'Job Finder AI Agent',
       description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
       image: '/fddd.mp4',
@@ -164,7 +183,7 @@ const Projects = () => {
 
 
     {
-      id: 11,
+      id: 12,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
