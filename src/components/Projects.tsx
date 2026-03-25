@@ -79,46 +79,46 @@ const Projects = () => {
       frontendUrl: 'https://pl-tawny-one.vercel.app/',
       backendUrl: 'https://pl-tawny-one.vercel.app/',
       liveUrl: 'https://pl-tawny-one.vercel.app/'
-    }, 
-    
-{
+    },
+
+    {
       id: 5,
       title: '3D Portfolio Website',
       description: 'Developed an interactive personal portfolio website with 3D-inspired visuals, responsive design, smooth animations, and modern UI to showcase projects and skills.',
       image: '/portfolio2.mp4',
       poster: '/portfolio2.png',
-      technologies: ['HTML5','CSS3','JavaScript'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript'],
       githubUrl: 'https://github.com/Vaibhavsable451/3d-Portfolio-Website.git',
-      liveUrl: 'https://gentle-llama-ea079b.netlify.app/'
+      liveUrl: 'https://3d-portfolio-website-kappa-kohl.vercel.app/'
 
     },
-    
+
     {
       id: 6,
       title: 'AI Recruitment Email Intelligence Agent',
       description: 'AI Recruitment Email Intelligence Agent is an automated workflow that fetches company emails from Gmail, classifies recruitment responses such as interview, selection, rejection, and offer emails using Groq LLM APIs, logs structured results into Google Sheets, and sends real-time alerts. Built using n8n workflow automation and LLM-powered classification, this system eliminates manual email tracking and improves job application management efficiency.',
       image: '/rdf.mp4',
       poster: '/rdf.png',
-     technologies: [
-'n8n',
-'Groq LLM API',
-'Gmail API',
-'Google Sheets API',
-'Workflow Automation',
-'AI Email Classification',
-'Google Cloud'
-],
+      technologies: [
+        'n8n',
+        'Groq LLM API',
+        'Gmail API',
+        'Google Sheets API',
+        'Workflow Automation',
+        'AI Email Classification',
+        'Google Cloud'
+      ],
       githubUrl: 'https://github.com/Vaibhavsable451/AI-Recruitment-Email-Intelligence-Agent.git',
 
     },
-    
+
     {
       id: 7,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
       poster: '/JobFinderAi.png',
-      technologies: ['n8n', 'Groq LLM', 'AI Agent', 'Google Sheets', 'Telegram Bot','Google Cloud', 'Automation'],
+      technologies: ['n8n', 'Groq LLM', 'AI Agent', 'Google Sheets', 'Telegram Bot', 'Google Cloud', 'Automation'],
       githubUrl: 'https://github.com/Vaibhavsable451/Job-Finder-AI-Agent.git',
 
     },
@@ -138,7 +138,7 @@ const Projects = () => {
       githubUrl: "https://github.com/Vaibhavsable451/Spring-AI-Build-Generative-AI-application-.git",
       frontendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
       backendUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/',
-      liveUrl: 'https://spring-ai-build-generative-ai-application-g4x4.onrender.com/'
+      liveUrl: 'https://aibuisl.vercel.app/'
     },
     {
       id: 9,
@@ -146,23 +146,23 @@ const Projects = () => {
       description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
       image: '/ds.mp4',
       poster: '/ds.png',
-      technologies: ['n8n', 'Groq LLM', 'Gmail API', 'Google Sheets', 'AI Classifier', 'Automation','Google Cloud'],
+      technologies: ['n8n', 'Groq LLM', 'Gmail API', 'Google Sheets', 'AI Classifier', 'Automation', 'Google Cloud'],
 
 
     },
-     {
+    {
       id: 10,
       title: 'Job Finder AI Agent',
       description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
       image: '/fddd.mp4',
       poster: '/fddd.png',
-      technologies: ['n8n', 'Groq LLM', 'Google Gemini', 'Gmail API', 'Google Docs', 'Apify', 'Automation','Google Cloud'],
+      technologies: ['n8n', 'Groq LLM', 'Google Gemini', 'Gmail API', 'Google Docs', 'Apify', 'Automation', 'Google Cloud'],
 
 
     },
 
 
-   
+
     {
       id: 11,
       title: "JARVIS – Real-Time AI Personal Assistant",
