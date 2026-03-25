@@ -115,7 +115,7 @@ const Projects = () => {
       id: 7,
       title: 'Tech Release Monitoring Agent – Java & React (Groq AI + n8n)',
       description: 'Tech Release Email Agent – Java & React (Groq AI + n8n) is an intelligent automation system that fetches the latest release information for Java and React from public APIs, processes and merges the data inside n8n, uses Groq LLM to generate concise technical summaries, and sends a formatted email notification through Gmail. The workflow is designed to help developers stay updated with important technology releases without manually checking changelogs and release pages.',
-      image: '/JavaTechRelease.mp4',
+      image: '/JavaTech.mp4',
       poster: '/JavaTech.png',
       technologies: [
         'n8n',
