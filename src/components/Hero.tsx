@@ -10,7 +10,7 @@ const Hero = () => {
     // Load Noupe chatbot script
     const script = document.createElement("script");
     script.src =
-      "https://www.noupe.com/embed/019a9671388271df81b8562be216dc05102c.js";
+      "https://www.noupe.com/embed/019d4ec602b376c4ae3a6691e0e0bd477a46.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -70,6 +70,19 @@ const Hero = () => {
             <p className="text-xl text-gray-300 mb-8">
               Full Stack Software Engineer specializing in Java · Spring Boot · Microservices and React.js — building secure, high-performance backend systems and responsive frontends. Delivered 20+ production APIs, event-driven architecture with Kafka, and AI-powered solutions that reduced customer support time by 35%.
             </p>
+
+            {/* AI Assistant Note */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mb-8 p-4 bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg backdrop-blur-sm shadow-lg shadow-yellow-900/10"
+            >
+              <p className="text-yellow-100 text-sm md:text-base leading-relaxed font-medium pt-2">
+                <span className="text-yellow-500 font-bold mr-2">💡 Note:</span>
+                This portfolio features an AI-powered assistant designed to help you efficiently explore my projects, technical skills, and internship experience. Interact with it in the bottom-right corner for structured insights!
+              </p>
+            </motion.div>
 
             <div className="flex flex-col gap-6">
               <div className="flex flex-wrap gap-4">
