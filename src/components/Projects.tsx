@@ -47,7 +47,7 @@ const Projects = () => {
       image: '/muti vendor ecommerce platform.png',
       technologies: ['Spring Boot', 'React', 'TypeScript', 'Redux Toolkit', 'MySQL', 'JWT', 'Tailwind CSS', 'MUI', 'Formik', 'Axios', 'Stripe', 'Razorpay', 'Gemini API'],
       githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor.git',
-      liveUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
+      liveUrl: 'https://ecommerce-multivendor-1.onrender.com/',
       frontendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
       backendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
     },
@@ -178,12 +178,33 @@ const Projects = () => {
       technologies: ['n8n', 'Groq LLM', 'Google Gemini', 'Gmail API', 'Google Docs', 'Apify', 'Automation', 'Google Cloud'],
 
 
+    }, {
+      id: 12,
+      title: "Multi-AI Chatbot Agent Platform (Gemini + Groq + OpenRouter)",
+      description: "A production-ready multi-LLM chatbot web application that integrates Gemini, Groq, and OpenRouter using n8n workflow orchestration and webhook-based communication. The system intelligently routes prompts across multiple AI providers and returns structured responses to a modern glassmorphism chat interface.",
+      image: "/Chatbot.mp4",
+      poster: '/Chatbot.png',
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "n8n Workflow Automation",
+        "Webhook API",
+        "Google Gemini",
+        "Groq LLM",
+        "OpenRouter",
+        "Prompt Routing",
+        "Multi-Agent Architecture"
+      ],
+      githubUrl: "https://github.com/Vaibhavsable451/Chatbot.git",
+      frontendUrl: 'https://chatbot-nine-phi-24.vercel.app/',
+      liveUrl: 'https://chatbot-nine-phi-24.vercel.app/'
     },
 
 
 
     {
-      id: 12,
+      id: 13,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
