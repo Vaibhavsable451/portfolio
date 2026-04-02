@@ -10,7 +10,7 @@ const Hero = () => {
     // Load Noupe chatbot script
     const script = document.createElement("script");
     script.src =
-      "https://www.noupe.com/embed/019d4ec602b376c4ae3a6691e0e0bd477a46.js";
+      "https://www.noupe.com/embed/019d4edf035d70a3b0ff15c6802c726deb81.js";
     script.async = true;
     document.body.appendChild(script);
 
