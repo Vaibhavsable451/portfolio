@@ -63,14 +63,45 @@ const Projects = () => {
       liveUrl: 'https://employee-management-system-blond-eight.vercel.app/'
     },
     {
-      id: 3,
+  id: 3,
+  title: 'AI Resume Match & Job Recommender',
+  description: 'A full-stack AI-powered Resume Match & Job Recommender platform that analyzes resumes against job descriptions using Spring AI and Groq LLaMA 3 to generate ATS scores, match percentages, skill gap insights, and personalized improvement suggestions. The system supports intelligent resume parsing (PDF/DOC), job requirement extraction, and automatic cover letter generation through a modern glassmorphism dashboard interface. The frontend is deployed on Vercel and the backend on Render, following secure REST API-based cloud deployment practices.',
+  image: '/resume-analyzer.mp4',
+  poster: '/resume-analyzer.png',
+  technologies: ['Java', 'Spring Boot', 'Spring AI', 'React', 'TypeScript', 'MySQL', 'Groq LLaMA 3', 'REST API', 'Tailwind CSS', 'JWT'],
+  githubUrl: 'https://github.com/Vaibhavsable451/Resume-Anlayzer.git',
+  liveUrl: 'https://resume-anlayzer.onrender.com/'
+},
+    {
+      id: 4,
       title: 'AI-Powered Fitness App',
       description: 'A full-stack AI-driven fitness application built with Spring Boot microservices, Kafka, Keycloak, and React. Features include user activity tracking, AI-powered recommendations, event-driven communication, and secure OAuth2 authentication.',
       image: '/fitness-app.png',
       technologies: ['Java', 'Spring Boot', 'Kafka', 'Keycloak', 'OAuth2', 'React', 'MongoDB', 'MySQL'],
       githubUrl: 'https://github.com/Vaibhavsable451/AI-Powered-Fitness-App-With-Spring-Boot-Microservices'
-    }, {
-      id: 4,
+    }, 
+    {
+  id: 5,
+  title: 'VibeCode Animated AI Website',
+  description: 'A cinematic AI-powered animated portfolio website built using Next.js with modern scroll-based storytelling techniques and Google Gemini-powered content workflows. The project demonstrates how AI-assisted design tools like Gemini, Google Whisk image generation, and Google Flow can be leveraged to create high-conversion brand identity websites featuring smooth scroll animations, interactive motion sections, and performance-optimized landing-page architecture. The site is deployed on Vercel with responsive UI and production-ready frontend engineering practices.',
+  image: '/Coffee.mp4',
+ poster: '/Coffee.png',
+  technologies: [
+    'Next.js',
+    'JavaScript',
+    'CSS',
+    'Gemini AI',
+    'Google Whisk',
+    'Google Flow',
+    'Scroll Animation UI',
+    'Vercel Deployment'
+  ],
+  githubUrl: 'https://github.com/Vaibhavsable451/vibecodeAnimated-Website.git',
+  liveUrl: 'https://vibecode-animated-website.vercel.app/'
+},
+    
+    {
+      id: 6,
       title: 'KairoAI Chatbot',
       description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. Both the frontend and backend are deployed on Vercel.',
       image: '/ai.mp4',
@@ -82,7 +113,7 @@ const Projects = () => {
     },
 
     {
-      id: 5,
+      id: 7,
       title: '3D Portfolio Website',
       description: 'Developed an interactive personal portfolio website with 3D-inspired visuals, responsive design, smooth animations, and modern UI to showcase projects and skills.',
       image: '/portfolio2.mp4',
@@ -93,7 +124,7 @@ const Projects = () => {
 
     },
     {
-      id: 6,
+      id: 8,
       title: 'AI Recruitment Email Intelligence Agent',
       description: 'AI Recruitment Email Intelligence Agent is an automated workflow that fetches company emails from Gmail, classifies recruitment responses such as interview, selection, rejection, and offer emails using Groq LLM APIs, logs structured results into Google Sheets, and sends real-time alerts. Built using n8n workflow automation and LLM-powered classification, this system eliminates manual email tracking and improves job application management efficiency.',
       image: '/rdf.mp4',
@@ -112,7 +143,7 @@ const Projects = () => {
     },
 
     {
-      id: 7,
+      id: 9,
       title: 'Tech Release Monitoring Agent – Java & React (Groq AI + n8n)',
       description: 'Tech Release Email Agent – Java & React (Groq AI + n8n) is an intelligent automation system that fetches the latest release information for Java and React from public APIs, processes and merges the data inside n8n, uses Groq LLM to generate concise technical summaries, and sends a formatted email notification through Gmail. The workflow is designed to help developers stay updated with important technology releases without manually checking changelogs and release pages.',
       image: '/JavaTechRelease.mp4',
@@ -132,7 +163,7 @@ const Projects = () => {
     },
 
     {
-      id: 8,
+      id: 10,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
@@ -142,7 +173,7 @@ const Projects = () => {
 
     },
     {
-      id: 9,
+      id: 11,
       title: "Spring AI Chatbot",
       description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. Both the frontend and backend are deployed on Render.",
       image: "/pari.png",
@@ -160,7 +191,7 @@ const Projects = () => {
       liveUrl: 'https://aibuisl.vercel.app/'
     },
     {
-      id: 10,
+      id: 12,
       title: 'Job Mail AI Tracker',
       description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
       image: '/ds.mp4',
@@ -170,7 +201,7 @@ const Projects = () => {
 
     },
     {
-      id: 11,
+      id: 13,
       title: 'Job Finder AI Agent',
       description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
       image: '/fddd.mp4',
@@ -179,7 +210,7 @@ const Projects = () => {
 
 
     }, {
-      id: 12,
+      id: 14,
       title: "Multi-AI Chatbot Agent Platform (Gemini + Groq + OpenRouter)",
       description: "A production-ready multi-LLM chatbot web application that integrates Gemini, Groq, and OpenRouter using n8n workflow orchestration and webhook-based communication. The system intelligently routes prompts across multiple AI providers and returns structured responses to a modern glassmorphism chat interface.",
       image: "/Chatbot.mp4",
@@ -204,7 +235,7 @@ const Projects = () => {
 
 
     {
-      id: 13,
+      id: 15,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
