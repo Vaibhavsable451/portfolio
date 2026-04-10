@@ -10,7 +10,7 @@ const Hero = () => {
     // Load Noupe chatbot script
     const script = document.createElement("script");
     script.src =
-      "https://www.noupe.com/embed/019d4edf035d70a3b0ff15c6802c726deb81.js";
+      "https://www.noupe.com/embed/019d77342f27738d9a33f696dc8d6830006c.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -60,113 +60,57 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              <span className="block">Hi, I&apos;m</span>
-              <span className="text-blue-400">Vaibhav Sable</span>
-              <span className="block text-2xl md:text-3xl text-gray-300 mt-4">
-                Full Stack Software Engineer
-              </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2">
+              <span className="block text-2xl md:text-3xl font-medium text-gray-400 mb-2">Hi, I&apos;m</span>
+              <span className="text-blue-400 drop-shadow-2xl">Vaibhav Sable</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Full Stack Software Engineer specializing in Java · Spring Boot · Microservices and React.js — building secure, high-performance backend systems and responsive frontends. Delivered 20+ production APIs, event-driven architecture with Kafka, and AI-powered solutions that reduced customer support time by 35%.
+            <h2 className="text-2xl md:text-4xl font-bold text-white/90 mb-6">
+              Full Stack Software Engineer
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+              Specializing in <span className="text-blue-400">Java · Spring Boot · Microservices</span> and <span className="text-blue-400">React.js</span>. 
+              I architect secure, high-performance backend systems and build intuitive, responsive frontends. 
+              Proven track record of delivering 20+ production APIs and AI-driven solutions.
             </p>
 
-            {/* AI Assistant Note */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="mb-8 p-4 bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg backdrop-blur-sm shadow-lg shadow-yellow-900/10"
-            >
-              <p className="text-yellow-100 text-sm md:text-base leading-relaxed font-medium pt-2">
-                <span className="text-yellow-500 font-bold mr-2">💡 Note:</span>
-                This portfolio features an AI-powered assistant designed to help you efficiently explore my projects, technical skills, and internship experience. Interact with it in the bottom-right corner for structured insights!
-              </p>
-            </motion.div>
-
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-8">
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors"
+                  className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold rounded-2xl transition-all hover:scale-105 shadow-xl shadow-yellow-500/20"
                 >
                   Get in Touch
                 </a>
                 <a
                   href="#projects"
-                  className="px-8 py-3 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 font-medium rounded-full transition-colors"
+                  className="px-8 py-4 border border-white/20 hover:border-yellow-500 text-white hover:text-yellow-500 font-bold rounded-2xl transition-all backdrop-blur-sm"
                 >
-                  View Projects
+                  View My Work
                 </a>
               </div>
 
-              <div className="flex flex-wrap gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://www.linkedin.com/in/vaibhav-sable-59b56827a/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <FaLinkedin className="text-yellow-500 text-xl" />
-                  LinkedIn
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://github.com/Vaibhavsable451"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <FaGithub className="text-yellow-500 text-xl" />
-                  GitHub
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://drive.google.com/file/d/1ZJL6RivMiZ0Zzq7IKmV4OPhU6aQa4OsQ/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <FaFileAlt className="text-yellow-500 text-xl" />
-                  Resume
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://vaibhavsable-klzmwv1.gamma.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <FiGlobe className="text-yellow-500 text-xl" />
-                  My Profile
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://leetcode.com/u/vaibhavsable122/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <SiLeetcode className="text-yellow-500 text-xl" />
-                  LeetCode
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://drive.google.com/file/d/1maTsxXwWSjsvD2IeSiq08UpIIXeGLXpx/edit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-900/50 border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 text-white font-medium rounded-xl transition-all shadow-lg shadow-yellow-900/20 backdrop-blur-sm"
-                >
-                  <FaEnvelopeOpenText className="text-yellow-500 text-xl" />
-                  Cover Letter
-                </motion.a>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vaibhav-sable-59b56827a/" },
+                  { icon: FaGithub, label: "GitHub", href: "https://github.com/Vaibhavsable451" },
+                  { icon: FaFileAlt, label: "Resume", href: "https://drive.google.com/file/d/1ZJL6RivMiZ0Zzq7IKmV4OPhU6aQa4OsQ/view?usp=sharing" },
+                  { icon: FiGlobe, label: "Portfolio", href: "https://vaibhavsable-klzmwv1.gamma.site/" },
+                  { icon: SiLeetcode, label: "LeetCode", href: "https://leetcode.com/u/vaibhavsable122/" },
+                  { icon: FaEnvelopeOpenText, label: "Cover Letter", href: "https://drive.google.com/file/d/1maTsxXwWSjsvD2IeSiq08UpIIXeGLXpx/edit" },
+                ].map((item, idx) => (
+                  <motion.a
+                    key={idx}
+                    whileHover={{ scale: 1.02, backgroundColor: "rgba(234, 179, 8, 0.1)" }}
+                    whileTap={{ scale: 0.98 }}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/10 hover:border-yellow-500/50 text-gray-300 hover:text-white rounded-xl transition-all backdrop-blur-md"
+                  >
+                    <item.icon className="text-yellow-500 text-xl" />
+                    <span className="text-sm font-medium">{item.label}</span>
+                  </motion.a>
+                ))}
               </div>
             </div>
           </motion.div>

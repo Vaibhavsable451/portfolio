@@ -68,7 +68,7 @@ const Projects = () => {
   description: 'A full-stack AI-powered Resume Match & Job Recommender platform that analyzes resumes against job descriptions using Spring AI and Groq LLaMA 3 to generate ATS scores, match percentages, skill gap insights, and personalized improvement suggestions. The system supports intelligent resume parsing (PDF/DOC), job requirement extraction, and automatic cover letter generation through a modern glassmorphism dashboard interface. The frontend is deployed on Vercel and the backend on Render, following secure REST API-based cloud deployment practices.',
   image: '/resume-analyzer.mp4',
   poster: '/resume-analyzer.png',
-  technologies: ['Java', 'Spring Boot', 'Spring AI', 'React', 'TypeScript', 'MySQL', 'Groq LLaMA 3', 'REST API', 'Tailwind CSS', 'JWT'],
+  technologies: ['Java', 'Spring Boot', 'Spring AI', 'React', 'TypeScript', 'MySQL', 'Groq LLaMA 3', 'REST API', 'Tailwind CSS', 'JWT','Postman'],
   githubUrl: 'https://github.com/Vaibhavsable451/Resume-Anlayzer.git',
   liveUrl: 'https://resume-anlayzer.onrender.com/'
 },
