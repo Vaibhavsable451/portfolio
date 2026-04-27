@@ -25,7 +25,7 @@ const VideoSection = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      <motion.div 
+      <motion.div
         className="w-full"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -33,18 +33,18 @@ const VideoSection = () => {
         transition={{ duration: 1 }}
       >
         <div className="relative w-full aspect-video md:aspect-[21/9]">
-          <video 
+          <video
             ref={videoRef}
             className="w-full h-full object-cover"
             autoPlay
             loop
             playsInline
-            // Removing the 'muted' attribute to try playing sound immediately
+          // Removing the 'muted' attribute to try playing sound immediately
           >
             <source src="/VaibhavPortfolio.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          
+
           {/* Subtle overlay to blend with surrounding sections */}
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-gray-900 to-transparent pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none" />

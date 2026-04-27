@@ -7,6 +7,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
+  highlights?: string[];
   image?: string;
   images?: string[];
   poster?: string;
@@ -99,9 +100,34 @@ const Projects = () => {
   githubUrl: 'https://github.com/Vaibhavsable451/vibecodeAnimated-Website.git',
   liveUrl: 'https://vibecode-animated-website.vercel.app/'
 },
-    
     {
-      id: 6,
+  id: 6,
+  title: 'Prompt-Driven AI Chatbot Agent',
+
+  description: 'Developed an AI chatbot agent using a prompt-driven workflow that converts user input into structured responses through an automated pipeline (input → AI processing → UI rendering). The system demonstrates how modern AI tools can generate multi-step application behavior with minimal manual coding while maintaining real-time interaction and clean interface output.',
+
+  highlights: [
+    'Single prompt-based workflow design',
+    'AI pipeline: Input → Processing → Render',
+    'Auto-generated UI + response handling',
+    'Real-time interaction system',
+    'Deployed on Google Opal '
+  ],
+
+ technologies: [
+  
+  'LLM API Integration',
+  'AI Workflow Builder (Google Opal)',
+  'Prompt-Driven Agent Design'
+],
+
+  image: '/PEN.mp4',
+  poster: '/PEN.png',
+
+  liveUrl: 'https://opal.google/app/1rh-gUMSzigdlN1cU8cNBUsm3q-ePb7BO'
+},
+    {
+      id: 7,
       title: 'KairoAI Chatbot',
       description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. Both the frontend and backend are deployed on Vercel.',
       image: '/ai.mp4',
@@ -113,7 +139,7 @@ const Projects = () => {
     },
 
     {
-      id: 7,
+      id: 8,
       title: '3D Portfolio Website',
       description: 'Developed an interactive personal portfolio website with 3D-inspired visuals, responsive design, smooth animations, and modern UI to showcase projects and skills.',
       image: '/portfolio2.mp4',
@@ -124,7 +150,7 @@ const Projects = () => {
 
     },
     {
-      id: 8,
+      id: 9,
       title: 'AI Recruitment Email Intelligence Agent',
       description: 'AI Recruitment Email Intelligence Agent is an automated workflow that fetches company emails from Gmail, classifies recruitment responses such as interview, selection, rejection, and offer emails using Groq LLM APIs, logs structured results into Google Sheets, and sends real-time alerts. Built using n8n workflow automation and LLM-powered classification, this system eliminates manual email tracking and improves job application management efficiency.',
       image: '/rdf.mp4',
@@ -143,7 +169,7 @@ const Projects = () => {
     },
 
     {
-      id: 9,
+      id: 10,
       title: 'Tech Release Monitoring Agent – Java & React (Groq AI + n8n)',
       description: 'Tech Release Email Agent – Java & React (Groq AI + n8n) is an intelligent automation system that fetches the latest release information for Java and React from public APIs, processes and merges the data inside n8n, uses Groq LLM to generate concise technical summaries, and sends a formatted email notification through Gmail. The workflow is designed to help developers stay updated with important technology releases without manually checking changelogs and release pages.',
       image: '/JavaTechRelease.mp4',
@@ -163,7 +189,7 @@ const Projects = () => {
     },
 
     {
-      id: 10,
+      id: 11,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
@@ -173,7 +199,7 @@ const Projects = () => {
 
     },
     {
-      id: 11,
+      id: 12,
       title: "Spring AI Chatbot",
       description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. Both the frontend and backend are deployed on Render.",
       image: "/pari.png",
@@ -191,7 +217,7 @@ const Projects = () => {
       liveUrl: 'https://aibuisl.vercel.app/'
     },
     {
-      id: 12,
+      id: 13,
       title: 'Job Mail AI Tracker',
       description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
       image: '/ds.mp4',
@@ -201,7 +227,7 @@ const Projects = () => {
 
     },
     {
-      id: 13,
+      id: 14,
       title: 'Job Finder AI Agent',
       description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
       image: '/fddd.mp4',
@@ -210,7 +236,7 @@ const Projects = () => {
 
 
     }, {
-      id: 14,
+      id: 15,
       title: "Multi-AI Chatbot Agent Platform (Gemini + Groq + OpenRouter)",
       description: "A production-ready multi-LLM chatbot web application that integrates Gemini, Groq, and OpenRouter using n8n workflow orchestration and webhook-based communication. The system intelligently routes prompts across multiple AI providers and returns structured responses to a modern glassmorphism chat interface.",
       image: "/Chatbot.mp4",
@@ -235,7 +261,7 @@ const Projects = () => {
 
 
     {
-      id: 15,
+      id: 16,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
@@ -393,6 +419,16 @@ const Projects = () => {
                 <p className="text-gray-300 mb-6">
                   {project.description}
                 </p>
+                {project.highlights && (
+                  <ul className="mb-6 space-y-2">
+                    {project.highlights.map((highlight, hIndex) => (
+                      <li key={hIndex} className="text-gray-400 text-sm flex items-start">
+                        <span className="text-blue-500 mr-2">•</span>
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
