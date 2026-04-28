@@ -14,7 +14,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-I’m an MCA (Master of Computer Applications) postgraduate and a passionate Full Stack Java Developer with experience in both frontend and backend development, specializing in Java backend development. I have hands-on experience using Java and Spring Boot to build scalable, secure, and high-performance backend applications, along with working knowledge of modern frontend technologies. I’m eager to contribute as a Software Engineer by developing robust RESTful APIs, user-friendly interfaces, and enterprise-grade systems.
+I’m an MCA (Master of Computer Applications) postgraduate and a passionate Software Engineer with experience in both frontend and backend development, specializing in Java backend development. I have hands-on experience using Java and Spring Boot to build scalable, secure, and high-performance backend applications, along with working knowledge of modern frontend technologies. I’m eager to contribute as a Software Engineer by developing robust RESTful APIs, user-friendly interfaces, and enterprise-grade systems.
 </p>
 
         </motion.div>
@@ -31,7 +31,7 @@ I’m an MCA (Master of Computer Applications) postgraduate and a passionate Ful
               My Expertise
             </h3>
            <p className="text-gray-300 mb-6">
-As an MCA postgraduate and     Full Stack Java Developer, I have developed strong expertise in both backend and frontend development. Through academic projects and coursework, I have gained hands-on experience using Java, Spring Boot, and related backend technologies to build scalable, secure, and production-ready applications, along with working knowledge of modern frontend technologies to create responsive and user-friendly interfaces.
+As an MCA postgraduate and Software Engineer, I have developed strong expertise in both backend and frontend development. Through academic projects and coursework, I have gained hands-on experience using Java, Spring Boot, and related backend technologies to build scalable, secure, and production-ready applications, along with working knowledge of modern frontend technologies to create responsive and user-friendly interfaces.
 </p>
 
             <p className="text-gray-300">
