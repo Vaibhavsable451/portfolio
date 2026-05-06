@@ -65,7 +65,7 @@ const Hero = () => {
               <span className="text-blue-400 drop-shadow-2xl">Vaibhav Sable</span>
             </h1>
             <h2 className="text-2xl md:text-4xl font-bold text-white/90 mb-6">
-              Software Engineer
+              Java Developer
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
               Specializing in <span className="text-blue-400">Java · Spring Boot · Microservices</span> and <span className="text-blue-400">React.js</span>. 
