@@ -27,6 +27,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="#about">About</NavLink>
+            <NavLink href="#developer-in-action">Developer in Action</NavLink>
             <NavLink href="#experience">Experience</NavLink>
             <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#certificates">Certificates</NavLink>
@@ -35,7 +36,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -46,7 +47,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -57,6 +58,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <MobileNavLink href="/" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
               <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
+              <MobileNavLink href="#developer-in-action" onClick={() => setIsOpen(false)}>Developer in Action</MobileNavLink>
               <MobileNavLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileNavLink>
               <MobileNavLink href="#skills" onClick={() => setIsOpen(false)}>Skills</MobileNavLink>
               <MobileNavLink href="#certificates" onClick={() => setIsOpen(false)}>Certificates</MobileNavLink>
@@ -72,8 +74,8 @@ const Header = () => {
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   return (
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       className="text-gray-200 hover:text-blue-400 font-medium transition-colors"
     >
       {children}
@@ -83,8 +85,8 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 
 const MobileNavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => {
   return (
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       className="text-gray-200 hover:text-blue-400 font-medium transition-colors block py-2"
       onClick={onClick}
     >

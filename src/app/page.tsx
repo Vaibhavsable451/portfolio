@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import VideoSection from "../components/VideoSection";
 import About from "../components/About";
+import DeveloperInAction from "../components/DeveloperInAction";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Certificates from "../components/Certificates";
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <VideoSection />
       <About />
+      <DeveloperInAction />
       <Experience />
       <Skills />
       <Certificates />
