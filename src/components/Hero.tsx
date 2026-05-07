@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiArrowDown, FiGlobe } from "react-icons/fi";
-import { FaLinkedin, FaGithub, FaFileAlt, FaEnvelopeOpenText } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { FiArrowDown } from "react-icons/fi";
 import { useEffect } from "react";
 
 const Hero = () => {
@@ -89,29 +87,7 @@ const Hero = () => {
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {[
-                  { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vaibhav-sable-59b56827a/" },
-                  { icon: FaGithub, label: "GitHub", href: "https://github.com/Vaibhavsable451" },
-                  { icon: FaFileAlt, label: "Resume", href: "https://drive.google.com/file/d/1ZJL6RivMiZ0Zzq7IKmV4OPhU6aQa4OsQ/view?usp=sharing" },
-                  { icon: FiGlobe, label: "Portfolio", href: "https://vaibhavsable-klzmwv1.gamma.site/" },
-                  { icon: SiLeetcode, label: "LeetCode", href: "https://leetcode.com/u/vaibhavsable122/" },
-                  { icon: FaEnvelopeOpenText, label: "Cover Letter", href: "https://drive.google.com/file/d/1maTsxXwWSjsvD2IeSiq08UpIIXeGLXpx/edit" },
-                ].map((item, idx) => (
-                  <motion.a
-                    key={idx}
-                    whileHover={{ scale: 1.02, backgroundColor: "rgba(234, 179, 8, 0.1)" }}
-                    whileTap={{ scale: 0.98 }}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/10 hover:border-yellow-500/50 text-gray-300 hover:text-white rounded-xl transition-all backdrop-blur-md"
-                  >
-                    <item.icon className="text-yellow-500 text-xl" />
-                    <span className="text-sm font-medium">{item.label}</span>
-                  </motion.a>
-                ))}
-              </div>
+
             </div>
           </motion.div>
 
