@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase, FiMonitor, FiCpu } from 'react-icons/fi';
+import { FiDatabase, FiMonitor, FiCpu } from 'react-icons/fi';
 
 const About = () => {
   return (

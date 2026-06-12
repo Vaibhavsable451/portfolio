@@ -2,7 +2,6 @@
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import VideoSection from "../components/VideoSection";
 import About from "../components/About";
 import DeveloperInAction from "../components/DeveloperInAction";
 import Experience from "../components/Experience";
@@ -17,7 +16,6 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <VideoSection />
       <About />
       <DeveloperInAction />
       <Experience />
