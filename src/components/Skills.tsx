@@ -1,71 +1,62 @@
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase, FiLayout, FiTool } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCpu, FiTool } from 'react-icons/fi';
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: <FiCode />,
-      title: 'Programming Languages',
+      title: 'Programming & Core CS',
       skills: [
-        { name: 'Java', level: 90 },
-        { name: 'HTML5', level: 85 },
-       { name: 'CSS3', level: 80 },
-       { name: 'JavaScript', level: 85 },
-      { name: 'React.js', level: 80 }
+        { name: 'Python', level: 90 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'DSA & Problem Solving', level: 85 },
+        { name: 'OOP & DBMS', level: 80 },
+      ],
+    },
+    {
+      icon: <FiCpu />,
+      title: 'AI / Machine Learning',
+      skills: [
+        { name: 'Generative AI', level: 90 },
+        { name: 'LLMs (OpenAI, Gemini, Claude)', level: 90 },
+        { name: 'Prompt Engineering', level: 85 },
+        { name: 'RAG Systems', level: 90 },
+        { name: 'AI Agents', level: 85 },
       ],
     },
     {
       icon: <FiDatabase />,
-      title: 'Databases',
+      title: 'Data & Backend',
       skills: [
         { name: 'SQL', level: 85 },
         { name: 'MySQL', level: 90 },
-      
-      ],
-    },
-    {
-      icon: <FiLayout />,
-      title: 'Frameworks & Libraries',
-      skills: [
-       
-        { name: 'Spring Boot', level: 95 },
-        { name: 'Spring MVC', level: 90 },
-        { name: 'Spring Data JPA', level: 90 },
-        { name: 'Hibernate (JPA)', level: 90 },
-       
-        { name: 'Microservices', level: 95 }
+        { name: 'Vector Databases (Pinecone, FAISS)', level: 85 },
+        { name: 'REST APIs', level: 85 },
       ],
     },
     {
       icon: <FiTool />,
-      title: 'Tools & Platforms',
+      title: 'AI Tools & Frameworks',
       skills: [
-       
-        { name: 'Postman', level: 100 },
-        { name: 'VS Code', level: 96 },
-        { name: 'IntelliJ IDEA', level: 95 },
-        { name: 'Spring Tool Suite', level: 95 },
-        { name: 'Docker', level: 90},       
-        { name: 'Apache Kafka', level: 92 }, 
-        { name: 'Github', level: 95 }, 
+        { name: 'LangChain', level: 90 },
+        { name: 'LangGraph', level: 80 },
+        { name: 'n8n Automation', level: 85 },
+        { name: 'Groq API', level: 85 },
+        { name: 'Git & GitHub', level: 90 },
       ],
     },
-    
   ];
 
   return (
     <section id="skills" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
-        <motion.div
-// ...
-          className="text-center mb-16"
-        >
+        <motion.div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            My Skills
+            AI / GenAI Skills
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Here are some of the skills I&apos;ve developed throughout my professional journey.
+            Specialized in building LLM-powered applications, RAG systems, AI agents, and automation workflows using modern GenAI tools.
           </p>
         </motion.div>
 
@@ -92,8 +83,12 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-gray-400">{skill.level}%</span>
+                      <span className="text-gray-300 font-medium">
+                        {skill.name}
+                      </span>
+                      <span className="text-gray-400">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2.5">
                       <motion.div
