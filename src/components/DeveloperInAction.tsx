@@ -6,6 +6,7 @@ const DeveloperInAction = () => {
   return (
     <section id="developer-in-action" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
+
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,12 +15,13 @@ const DeveloperInAction = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            💼 Developer in Action
+            🤖 AI Engineer in Action
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
+
           {/* Content side */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -29,45 +31,56 @@ const DeveloperInAction = () => {
             className="lg:w-1/2"
           >
             <div className="space-y-6 text-gray-300 text-lg">
+
               <p>
-                Working in a structured and focused environment, I build scalable backend systems using modern Java technologies.
+                I design and build AI-powered applications using LLMs, Agentic AI systems, and Retrieval-Augmented Generation (RAG) pipelines.
               </p>
+
               <p>
-                From designing APIs to implementing clean architecture, I focus on writing efficient, maintainable, and production-ready code.
+                My focus is on developing intelligent systems that automate workflows, extract insights from data, and solve real-world problems using Generative AI.
               </p>
+
               <p>
-                I believe in continuous learning, problem-solving, and delivering solutions that create real impact.
+                I continuously explore modern AI frameworks like LangChain, LangGraph, and n8n to build scalable and production-ready AI solutions.
               </p>
-              
+
               <hr className="border-gray-700 my-8" />
-              
+
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                  🧠 What Happens Here
+                  🧠 What I Work On
                 </h3>
+
                 <ul className="space-y-4">
+
                   <li className="flex items-center gap-3">
                     <FiCheckCircle className="text-blue-500 text-xl" />
-                    <span>Backend Development (Java + Spring Boot)</span>
+                    <span>LLM-based Applications (OpenAI, Gemini, Claude)</span>
                   </li>
+
                   <li className="flex items-center gap-3">
                     <FiCheckCircle className="text-blue-500 text-xl" />
-                    <span>API Design & Integration</span>
+                    <span>Agentic AI Systems & Multi-Agent Workflows</span>
                   </li>
+
                   <li className="flex items-center gap-3">
                     <FiCheckCircle className="text-blue-500 text-xl" />
-                    <span>Database Management</span>
+                    <span>RAG Pipelines with Vector Databases</span>
                   </li>
+
                   <li className="flex items-center gap-3">
                     <FiCheckCircle className="text-blue-500 text-xl" />
-                    <span>Clean Code Practices</span>
+                    <span>AI Automation (n8n, APIs, Workflows)</span>
                   </li>
+
                   <li className="flex items-center gap-3">
                     <FiCheckCircle className="text-blue-500 text-xl" />
-                    <span>Debugging & Optimization</span>
+                    <span>Prompt Engineering & Context Optimization</span>
                   </li>
+
                 </ul>
               </div>
+
             </div>
           </motion.div>
 
@@ -82,13 +95,14 @@ const DeveloperInAction = () => {
             <div className="relative rounded-xl overflow-hidden shadow-2xl border border-gray-700">
               <Image
                 src="/office.png"
-                alt="Developer in Action"
+                alt="AI Engineer in Action"
                 width={800}
                 height={600}
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
