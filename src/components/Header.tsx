@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
@@ -19,13 +18,13 @@ const Header = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+          <a href="#home" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
             Portfolio
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#developer-in-action">Developer in Action</NavLink>
             <NavLink href="#experience">Experience</NavLink>
@@ -56,7 +55,7 @@ const Header = () => {
         >
           <div className="container mx-auto px-6 py-4">
             <nav className="flex flex-col space-y-4">
-              <MobileNavLink href="/" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
+              <MobileNavLink href="#home" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
               <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
               <MobileNavLink href="#developer-in-action" onClick={() => setIsOpen(false)}>Developer in Action</MobileNavLink>
               <MobileNavLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileNavLink>
@@ -74,24 +73,24 @@ const Header = () => {
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   return (
-    <Link
+    <a
       href={href}
       className="text-gray-200 hover:text-blue-400 font-medium transition-colors"
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
 const MobileNavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => {
   return (
-    <Link
+    <a
       href={href}
       className="text-gray-200 hover:text-blue-400 font-medium transition-colors block py-2"
       onClick={onClick}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
