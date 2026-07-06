@@ -66,6 +66,29 @@ const Projects = () => {
     },
     {
   id: 2,
+  title: 'Agentic ATS Resume Generator',
+  description: 'An AI-powered multi-agent resume generation system that creates ATS-optimized resumes tailored to any job description using LangGraph, RAG with Pinecone, and Groq LLM. Features a self-correcting feedback loop for improved ATS scores and grounded content generation.', 
+  image: '/ats-resume.mp4',
+  poster: '/ats-resume.png',
+  technologies: [
+    'Python',
+    'LangGraph',
+    'LangChain',
+    'Groq LLM',
+    'FastAPI',
+    'Streamlit',
+    'Pinecone',
+    'RAG',
+    'ReportLab',
+    'Agentic AI',
+    'Vector Database',
+    'REST API'
+  ],
+  githubUrl: 'https://github.com/Vaibhavsable451/Agentic-ATS-Resume-Generator',
+  
+},
+    {
+  id: 3,
   title: 'AI Sales Intelligence Agent (29-Node Multi-Agent System)',
   description:
     'A 29-node Multi-Agent AI Sales Intelligence Agent built with n8n that automates website analysis, company research, AI-powered pain point detection, personalized sales email generation, HTML report creation, lead tracking, and real-time Slack notifications. The system integrates Groq LLaMA 3.3, SerpAPI, Gmail API, Google Sheets API, and Slack API to deliver an end-to-end AI sales automation workflow.',
@@ -93,7 +116,7 @@ const Projects = () => {
   liveUrl: 'https://resdasales.netlify.app/'
 },
     {
-      id: 3,
+      id: 4,
       title: 'Agentic AI YouTube Summarizer (Multi-Agent System)',
       description: 'An Agentic AI-powered application that transforms YouTube videos into structured learning content. The system automatically extracts transcripts, analyzes key topics, generates concise and detailed summaries, and creates notes, Q&A, and quizzes using a multi-agent architecture powered by Groq LLaMA 3.3 70B and LangChain.',
       image: '/youtube-summarizer.mp4',
@@ -110,7 +133,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Agentic-AI-YouTube-Summarizer-Multi-Agent-System-'
     },
     {
-      id: 4,
+      id: 5,
       title: 'AI Customer Support Agent Platform',
       description: 'Enterprise-grade multi-agent customer support platform built with FastAPI, LangGraph, Groq, Pinecone, PostgreSQL, Kubernetes, and MLflow. Features intelligent query routing, RAG-powered support agents, automated ticket handling, confidence-based escalation, JWT authentication, observability, MLOps tracking, and production-ready CI/CD deployment. Designed using a scalable Agentic AI architecture with Router, Knowledge, Support, Billing, and Escalation agents.',
       image: '/customer-support-platform.mp4',
@@ -139,7 +162,7 @@ const Projects = () => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: 'ResumeForgeAI – Multi-Agent ATS Resume Builder',
       description: 'An AI-powered multi-agent resume generation platform that creates ATS-optimized resumes tailored to specific job descriptions. The system analyzes job descriptions, GitHub profiles, portfolio websites, and existing resumes to generate recruiter-friendly resumes, ATS score reports, keyword optimization suggestions, and downloadable PDF resumes using Groq LLMs and a multi-agent workflow.',
       image: '/resumeforgeai.mp4',
@@ -162,7 +185,7 @@ const Projects = () => {
       liveUrl: 'https://resumeforgeai-multi-agent-ats-resume-builder-git-2wyenfbbf3uef.streamlit.app/'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Q&A AI Agent with RAG using n8n',
       description: 'A no-code AI-powered Question & Answer system built using n8n, Google Gemini, Pinecone, and Google Drive. The platform implements Retrieval-Augmented Generation (RAG) to ingest documents, generate embeddings, perform semantic search, and provide context-aware answers through an intelligent AI chatbot with conversational memory.',
       image: '/qa-rag-agent.mp4',
@@ -181,7 +204,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Q-A-AI-Agent-with-RAG-using-n8n-'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Multi-Agent AI Sales & Support System',
       description: 'An AI-powered customer engagement platform that intelligently routes customer conversations to specialized Sales and Support AI agents. Built using a Supervisor Agent architecture, the system analyzes user intent, performs smart routing, and generates real-time responses for sales inquiries, technical support, refund requests, and customer assistance workflows.',
       image: '/sales-support-agent.mp4',
@@ -202,7 +225,7 @@ const Projects = () => {
       liveUrl: 'https://agentfd.netlify.app/',
     },
     {
-      id: 8,
+      id: 9,
       title: 'Cricket Multi-Agent Factory (Supervisor + 6 AI Agents)',
       description: 'Built a production-style Multi-Agent Cricket Intelligence Platform featuring a Supervisor Agent and six specialized AI agents: SCORE-X (live scores), STATX (player statistics), CHRONOS (fixtures & schedules), PULSE (cricket news), TACTIX (match analysis & predictions), and ARCHIVE (historical records). Integrated Groq Llama 3.3 70B, SerpAPI web search grounding, validation layers, and hallucination reduction mechanisms to deliver accurate, real-time cricket insights through an intelligent agent orchestration workflow.',
       image: '/cricket-multi-agent.mp4',
@@ -224,7 +247,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/Cricket-Multi-Agent-Factory-Supervisor-6-Agents---Groq-v2'
     },
     {
-      id: 9,
+      id: 10,
       title: 'Multivendor ecommerce platform',
       description: 'A full-stack e-commerce platform with multi-role support (Admin, Seller, User) featuring JWT authentication, OTP verification, and responsive MUI/Tailwind design. Includes AI chatbot support and integrates Stripe/Razorpay payments.',
       image: '/muti vendor ecommerce platform.png',
@@ -235,7 +258,7 @@ const Projects = () => {
       backendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
     },
     {
-      id: 10,
+      id: 11,
       title: 'Employee Management System',
       description: 'A full-stack Employee Management System built to efficiently manage employee records using complete CRUD operations. The application enables administrators to create, view, update, and delete employee details through a clean and responsive user interface. The frontend is deployed on Vercel and the backend is on Render, following modern cloud deployment practices with secure REST API communication.',
       image: '/employee.png',
@@ -246,7 +269,7 @@ const Projects = () => {
       liveUrl: 'https://employee-management-system-blond-eight.vercel.app/'
     },
     {
-      id: 11,
+      id: 12,
       title: 'AI Resume Match & Job Recommender',
       description: 'A full-stack AI-powered Resume Match & Job Recommender platform that analyzes resumes against job descriptions using Spring AI and Groq LLaMA 3 to generate ATS scores, match percentages, skill gap insights, and personalized improvement suggestions. The system supports intelligent resume parsing (PDF/DOC), job requirement extraction, and automatic cover letter generation through a modern glassmorphism dashboard interface. The frontend is deployed on Vercel and the backend on Render, following secure REST API-based cloud deployment practices.',
       image: '/resume-analyzer.mp4',
@@ -256,7 +279,7 @@ const Projects = () => {
       liveUrl: 'https://resume-anlayzer.onrender.com/'
     },
     {
-      id: 12,
+      id: 13,
       title: 'AI-Powered Fitness App',
       description: 'A full-stack AI-driven fitness application built with Spring Boot microservices, Kafka, Keycloak, and React. Features include user activity tracking, AI-powered recommendations, event-driven communication, and secure OAuth2 authentication.',
       image: '/fitness-app.png',
@@ -264,7 +287,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/Vaibhavsable451/AI-Powered-Fitness-App-With-Spring-Boot-Microservices'
     },
     {
-      id: 13,
+      id: 14,
       title: 'VibeCode Animated AI Website',
       description: 'A cinematic AI-powered animated portfolio website built using Next.js with modern scroll-based storytelling techniques and Google Gemini-powered content workflows. The project demonstrates how AI-assisted design tools like Gemini, Google Whisk image generation, and Google Flow can be leveraged to create high-conversion brand identity websites featuring smooth scroll animations, interactive motion sections, and performance-optimized landing-page architecture. The site is deployed on Vercel with responsive UI and production-ready frontend engineering practices.',
       image: '/Coffee.mp4',
@@ -283,7 +306,7 @@ const Projects = () => {
       liveUrl: 'https://vibecode-animated-website.vercel.app/'
     },
     {
-      id: 14,
+      id: 15,
       title: 'Prompt-Driven AI Chatbot Agent',
 
       description: 'Developed an AI chatbot agent using a prompt-driven workflow that converts user input into structured responses through an automated pipeline (input → AI processing → UI rendering). The system demonstrates how modern AI tools can generate multi-step application behavior with minimal manual coding while maintaining real-time interaction and clean interface output.',
@@ -309,7 +332,7 @@ const Projects = () => {
       liveUrl: 'https://opal.google/app/1rh-gUMSzigdlN1cU8cNBUsm3q-ePb7BO'
     },
     {
-      id: 15,
+      id: 16,
       title: 'KairoAI Chatbot',
       description: 'KairoAI Chatbot is a fast, intelligent AI-powered chatbot that delivers real-time, accurate responses using modern AI APIs. It supports secure OTP-based authentication, multimodal inputs (text + image), and voice-enabled replies, all within a sleek and responsive UI. Both the frontend and backend are deployed on Vercel.',
       image: '/ai.png',
@@ -321,7 +344,7 @@ const Projects = () => {
     },
 
     {
-      id: 16,
+      id: 17,
       title: '3D Portfolio Website',
       description: 'Developed an interactive personal portfolio website with 3D-inspired visuals, responsive design, smooth animations, and modern UI to showcase projects and skills.',
       image: '/portfolio2.mp4',
@@ -332,7 +355,7 @@ const Projects = () => {
 
     },
     {
-      id: 17,
+      id: 18,
       title: 'AI Recruitment Email Intelligence Agent',
       description: 'AI Recruitment Email Intelligence Agent is an automated workflow that fetches company emails from Gmail, classifies recruitment responses such as interview, selection, rejection, and offer emails using Groq LLM APIs, logs structured results into Google Sheets, and sends real-time alerts. Built using n8n workflow automation and LLM-powered classification, this system eliminates manual email tracking and improves job application management efficiency.',
       image: '/rdf.mp4',
@@ -351,7 +374,7 @@ const Projects = () => {
     },
 
     {
-      id: 18,
+      id: 19,
       title: 'Tech Release Monitoring Agent – Java & React (Groq AI + n8n)',
       description: 'Tech Release Email Agent – Java & React (Groq AI + n8n) is an intelligent automation system that fetches the latest release information for Java and React from public APIs, processes and merges the data inside n8n, uses Groq LLM to generate concise technical summaries, and sends a formatted email notification through Gmail. The workflow is designed to help developers stay updated with important technology releases without manually checking changelogs and release pages.',
       image: '/JavaTechRelease.mp4',
@@ -371,7 +394,7 @@ const Projects = () => {
     },
 
     {
-      id: 19,
+      id: 20,
       title: 'JOB FINDER AI AGENT',
       description: 'Job Finder AI Agent is an end-to-end AI-powered job automation system that intelligently searches LinkedIn jobs, evaluates them against a candidate’s resume using LLMs, generates personalized cover letters, and sends real-time Telegram alerts — eliminating manual job searching and repetitive applications. Built using n8n workflow automation, Groq LLM APIs, Google Sheets, and Telegram Bot integration, this system acts as a fully automated AI job discovery engine.',
       image: '/JobFinderAiAgent.mp4',
@@ -381,7 +404,7 @@ const Projects = () => {
 
     },
     {
-      id: 20,
+      id: 21,
       title: "Spring AI Chatbot",
       description: "Built an AI chatbot application using Spring Boot, Spring AI, React.js, and Groq-powered LLMs to enable intelligent conversational responses through a modern web interface. Implemented frontend-backend integration, REST API communication, markdown and code response rendering, and a clean chat UI with conversation history support. Both the frontend and backend are deployed on Render.",
       image: "/pari.png",
@@ -399,7 +422,7 @@ const Projects = () => {
       liveUrl: 'https://aibuisl.vercel.app/'
     },
     {
-      id: 21,
+      id: 22,
       title: 'Job Mail AI Tracker',
       description: 'Job Mail AI Tracker is an n8n-powered automation workflow that automatically scans Gmail, uses Groq LLM to intelligently classify job emails as Rejection or Applied, labels them in Gmail, and logs every result to Google Sheets — building a real-time rejection and application tracker with zero manual effort.',
       image: '/ds.mp4',
@@ -409,7 +432,7 @@ const Projects = () => {
 
     },
     {
-      id: 22,
+      id: 23,
       title: 'Job Finder AI Agent',
       description: 'Job Finder AI Agent is an n8n-powered end-to-end job automation system that scrapes live job listings via HTTP Request, filters the top 10 matches, merges them with your Google Docs resume, uses Groq LLM and Google Gemini to evaluate fit, generates personalized cover letter emails — and automatically sends them directly to hiring managers via Gmail with zero manual effort.',
       image: '/fddd.mp4',
@@ -418,7 +441,7 @@ const Projects = () => {
 
 
     }, {
-      id: 23,
+      id: 24,
       title: "Multi-AI Chatbot Agent Platform (Gemini + Groq + OpenRouter)",
       description: "A production-ready multi-LLM chatbot web application that integrates Gemini, Groq, and OpenRouter using n8n workflow orchestration and webhook-based communication. The system intelligently routes prompts across multiple AI providers and returns structured responses to a modern glassmorphism chat interface.",
       image: "/Chatbot.mp4",
@@ -443,7 +466,7 @@ const Projects = () => {
 
 
     {
-      id: 24,
+      id: 25,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
       image: "/jarvis-ai.png",
