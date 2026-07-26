@@ -464,8 +464,7 @@ const Projects = () => {
     },
 
 
-
-    {
+  {
       id: 25,
       title: "JARVIS – Real-Time AI Personal Assistant",
       description: "A real-time AI personal assistant built with Python capable of executing system commands, answering queries, automating keyboard and mouse actions, managing files, and storing persistent memory. Designed with a modular architecture for extensibility and real-world automation use cases.",
@@ -482,6 +481,28 @@ const Projects = () => {
       ],
       githubUrl: "https://github.com/Vaibhavsable451/Advanced-Real-Time-AI-Personal-Assistant.git"
     },
+
+    {
+  id: 26,
+  title: 'Dual AI Chat',
+  description:
+    'A multi-model AI chat application that enables users to compare responses from Groq Llama 3.3 70B, Google Gemini 2.5 Flash, and OpenRouter GPT-4o mini side-by-side in real time.',
+  image: '/Dual AI Chat.mp4',
+     poster: '/Dual AI Chat.png',
+  technologies: [
+    'Groq',
+    'Google Gemini',
+    'OpenRouter',
+    'Llama 3.3 70B',
+    'Gemini 2.5 Flash',
+    'GPT-4o mini',
+    'React',
+    'AI APIs',
+    'LLMs'
+  ],
+
+  liveUrl: 'https://twin-chat-guide.lovable.app/chat/fa050b7e-136e-43c4-9e66-6d353f45f213'
+}
 
 
 
