@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiPlay, FiX } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiPlay, FiX, FiCpu } from 'react-icons/fi';
 import { useState, useEffect, useRef } from 'react';
 
 interface Project {
@@ -16,6 +16,7 @@ interface Project {
   liveUrl?: string;
   frontendUrl?: string;
   backendUrl?: string;
+  architectureImage?: string;
 }
 
 const Projects = () => {
@@ -23,6 +24,7 @@ const Projects = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [showVideo, setShowVideo] = useState(false);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
+  const [selectedArchImage, setSelectedArchImage] = useState<string | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -130,7 +132,8 @@ const Projects = () => {
         'Multi-Agent Systems',
         'Generative AI'
       ],
-      githubUrl: 'https://github.com/Vaibhavsable451/Agentic-AI-YouTube-Summarizer-Multi-Agent-System-'
+      githubUrl: 'https://github.com/Vaibhavsable451/Agentic-AI-YouTube-Summarizer-Multi-Agent-System-',
+      architectureImage: '/youtube_summarizer_architecture.png'
     },
     {
       id: 5,
@@ -711,6 +714,20 @@ const Projects = () => {
                       <FiGithub className="mr-2" /> View Code
                     </a>
                   )}
+                  {project.architectureImage && (
+                    <button
+                      onClick={() => setSelectedArchImage(project.architectureImage!)}
+                      className="group relative flex items-center justify-center gap-2 px-4 py-2.5 h-10 rounded-lg font-bold text-sm whitespace-nowrap overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                      style={{
+                        background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 60%, #dc2626 100%)',
+                        boxShadow: '0 0 18px rgba(239,68,68,0.45)'
+                      }}
+                    >
+                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700 -skew-x-12" />
+                      <FiCpu className="relative z-10 text-white" size={16} />
+                      <span className="relative z-10 text-white tracking-wide">Architecture Diagram</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -748,6 +765,35 @@ const Projects = () => {
                 className="w-full rounded-lg shadow-2xl"
                 key={selectedVideo}
               />
+            </div>
+          </div>
+        )}
+
+        {/* Architecture Diagram Modal */}
+        {selectedArchImage && (
+          <div
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedArchImage(null)}
+          >
+            <button
+              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedArchImage(null);
+              }}
+            >
+              <FiX className="w-8 h-8" />
+            </button>
+            <div className="w-full max-w-5xl" onClick={e => e.stopPropagation()}>
+              <p className="text-center text-amber-400 font-bold text-lg mb-4 tracking-wider uppercase">System Architecture Diagram</p>
+              <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+                <Image
+                  src={selectedArchImage}
+                  alt="Architecture Diagram"
+                  fill
+                  className="object-contain rounded-xl shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         )}
