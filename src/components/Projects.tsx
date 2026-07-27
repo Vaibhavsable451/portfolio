@@ -64,7 +64,8 @@ const Projects = () => {
         'LLMs'
       ],
       githubUrl: 'https://github.com/Vaibhavsable451/Multi-Agent-AI-Research-System.git',
-      liveUrl: 'https://multi-agent-ai-research-systemgit-iwmmnrqhttqezs2zxdhtuz.streamlit.app/'
+      liveUrl: 'https://multi-agent-ai-research-systemgit-iwmmnrqhttqezs2zxdhtuz.streamlit.app/',
+      architectureImage: '/multi_agent_research_architecture.png'
     },
     {
   id: 2,
