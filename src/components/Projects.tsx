@@ -502,16 +502,27 @@ const Projects = () => {
   ],
 
   liveUrl: 'https://twin-chat-guide.lovable.app/chat/fa050b7e-136e-43c4-9e66-6d353f45f213'
-}
-
-
-
-
-
-
-
-
-
+    },
+    {
+      id: 27,
+      title: 'COVID-19 Data Analysis Using Python',
+      description: 'Data analysis and exploratory data analysis project developed during the Data Science Internship at IStudio. Analyzed COVID-19 data using Python, Pandas, NumPy, Matplotlib, and Seaborn to identify trends and derive insights across continents. Performed data cleaning, missing-value handling, duplicate removal, date-time processing, filtering, aggregation, feature engineering, and statistical analysis. Created visualizations including histograms, scatter plots, pair plots, and bar charts, and exported processed data for further analysis.',
+      image: '/covid_analysis.png',
+      technologies: [
+        'Python',
+        'Pandas',
+        'NumPy',
+        'Matplotlib',
+        'Seaborn',
+        'Data Analysis',
+        'Exploratory Data Analysis',
+        'Data Cleaning',
+        'Feature Engineering',
+        'Data Visualization',
+        'Statistical Analysis'
+      ],
+      githubUrl: 'https://github.com/Vaibhavsable451/Project-Internship'
+    }
   ];
 
   return (
