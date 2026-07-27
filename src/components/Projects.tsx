@@ -161,7 +161,8 @@ const Projects = () => {
         'RAG',
         'MLOps'
       ],
-      githubUrl: 'https://github.com/Vaibhavsable451/AI-Customer-Support-Command-Center'
+      githubUrl: 'https://github.com/Vaibhavsable451/AI-Customer-Support-Command-Center',
+      architectureImage: '/customer_support_architecture.png'
     },
 
     {
