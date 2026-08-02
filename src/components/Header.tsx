@@ -37,7 +37,7 @@ const Header = () => {
       }`}
     >
       <div className="w-full px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-18 lg:h-22">
 
           {/* Logo */}
           <a
@@ -53,7 +53,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-200 hover:text-amber-400 font-semibold transition-all duration-200 text-sm lg:text-[15px] whitespace-nowrap px-2 py-1.5 rounded-lg hover:bg-amber-400/10 shrink-0"
+                className="text-gray-200 hover:text-amber-400 font-bold transition-all duration-200 text-base lg:text-lg whitespace-nowrap px-2.5 py-2 rounded-lg hover:bg-amber-400/10 shrink-0"
               >
                 {link.label}
               </a>
