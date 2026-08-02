@@ -553,7 +553,65 @@ const Projects = () => {
         'Statistical Analysis'
       ],
       githubUrl: 'https://github.com/Vaibhavsable451/Project-Internship'
-    }
+    },
+    {
+  id: 25,
+  title: "TalentFlow AI – Multi-Agent Recruitment Automation System",
+  description:
+    "An end-to-end multi-agent AI recruitment automation platform built with n8n that streamlines the hiring workflow from resume and job description analysis to ATS scoring, semantic candidate search, and automated recruiter email generation. The system orchestrates multiple AI agents using Google Gemini, Groq, OpenRouter fallback routing, Pinecone vector search, and Gmail API to deliver an explainable, production-oriented recruitment pipeline.",
+  image: "/TalentFlow AI.mp4",
+  poster: "/TalentFlow AI.png",
+  technologies: [
+    "n8n Workflow Automation",
+    "Google Gemini",
+    "Groq LLM",
+    "OpenRouter",
+    "Pinecone Vector Database",
+    "Webhook API",
+    "JavaScript",
+    "AI Agents",
+    "Multi-Agent Architecture",
+    "Prompt Engineering",
+    "ATS Scoring",
+    "Semantic Search",
+    "Gmail API",
+    "REST APIs"
+  ],
+  githubUrl: "https://github.com/Vaibhavsable451/TalentFlow-AI.git",
+  
+},
+{
+  id: 26,
+  title: "AI Data Science & LLM Studio",
+  description:
+    "AI Data Science & LLM Studio is an end-to-end AI engineering platform built with Python and Streamlit that integrates the complete machine learning workflow into a single application. It enables data preprocessing, exploratory data analysis (EDA), feature engineering, machine learning model training and evaluation, deep learning with PyTorch, Retrieval-Augmented Generation (RAG) using LangChain and Pinecone, and a multi-LLM chatbot supporting Google Gemini, Groq, and OpenRouter. The project demonstrates a production-oriented AI workflow from raw data processing to intelligent conversational AI within one interactive platform.",
+  image: "/ml.mp4",
+  poster: "/ml.png",
+  technologies: [
+    "Python",
+    "Streamlit",
+    "Scikit-learn",
+    "PyTorch",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Plotly",
+    "LangChain",
+    "Pinecone",
+    "Google Gemini",
+    "Groq",
+    "OpenRouter",
+    "Machine Learning",
+    "Deep Learning",
+    "Retrieval-Augmented Generation (RAG)",
+    "Vector Database",
+    "Prompt Engineering",
+    "LLMs"
+  ],
+  githubUrl: "https://github.com/Vaibhavsable451/AI-Data-Science-LLM-Studio",
+  frontendUrl: "https://ai-data-science-llm-studio-7eppgxdehbjgwd3gewgtgr.streamlit.app/",
+  liveUrl: "https://ai-data-science-llm-studio-7eppgxdehbjgwd3gewgtgr.streamlit.app/"
+},
   ];
 
   return (

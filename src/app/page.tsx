@@ -6,6 +6,7 @@ import About from "../components/About";
 import DeveloperInAction from "../components/DeveloperInAction";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
+import Achievements from "../components/Achievements";
 import Certificates from "../components/Certificates";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
@@ -13,13 +14,14 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
       <About />
       <DeveloperInAction />
       <Experience />
       <Skills />
+      <Achievements />
       <Certificates />
       <Projects />
       <Contact />

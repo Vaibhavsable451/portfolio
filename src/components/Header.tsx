@@ -18,17 +18,18 @@ const Header = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+          <a href="#home" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
             Portfolio
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-5 lg:space-x-7">
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#developer-in-action">Developer in Action</NavLink>
             <NavLink href="#experience">Experience</NavLink>
             <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#achievements">Achievements</NavLink>
             <NavLink href="#certificates">Certificates</NavLink>
             <NavLink href="#projects">Projects</NavLink>
             <NavLink href="#contact">Contact</NavLink>
@@ -36,8 +37,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-white focus:outline-none p-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -51,7 +53,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-gray-900 shadow-lg"
+          className="md:hidden bg-gray-900 shadow-lg border-b border-gray-800"
         >
           <div className="container mx-auto px-6 py-4">
             <nav className="flex flex-col space-y-4">
@@ -60,6 +62,7 @@ const Header = () => {
               <MobileNavLink href="#developer-in-action" onClick={() => setIsOpen(false)}>Developer in Action</MobileNavLink>
               <MobileNavLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileNavLink>
               <MobileNavLink href="#skills" onClick={() => setIsOpen(false)}>Skills</MobileNavLink>
+              <MobileNavLink href="#achievements" onClick={() => setIsOpen(false)}>Achievements</MobileNavLink>
               <MobileNavLink href="#certificates" onClick={() => setIsOpen(false)}>Certificates</MobileNavLink>
               <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
               <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>Contact</MobileNavLink>
@@ -75,7 +78,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   return (
     <a
       href={href}
-      className="text-gray-200 hover:text-blue-400 font-medium transition-colors"
+      className="text-gray-200 hover:text-amber-400 font-medium transition-colors text-xs lg:text-sm"
     >
       {children}
     </a>
@@ -86,7 +89,7 @@ const MobileNavLink = ({ href, children, onClick }: { href: string; children: Re
   return (
     <a
       href={href}
-      className="text-gray-200 hover:text-blue-400 font-medium transition-colors block py-2"
+      className="text-gray-200 hover:text-amber-400 font-medium transition-colors block py-2 text-base"
       onClick={onClick}
     >
       {children}
