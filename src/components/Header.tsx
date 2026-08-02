@@ -1,6 +1,20 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#developer-in-action', label: 'Dev in Action' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#achievements', label: 'Achievements' },
+  { href: '#certificates', label: 'Certificates' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,85 +29,75 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
-            Portfolio
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-gray-900/96 backdrop-blur-md shadow-lg border-b border-gray-800'
+          : 'bg-gray-900/80 backdrop-blur-sm'
+      }`}
+    >
+      <div className="w-full px-6 lg:px-10">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+
+          {/* Logo */}
+          <a
+            href="#home"
+            className="text-xl lg:text-2xl font-extrabold text-white hover:text-amber-400 transition-colors tracking-tight shrink-0"
+          >
+            <span className="text-amber-400">&lt;</span>Portfolio<span className="text-amber-400">/&gt;</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-5 lg:space-x-7">
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#developer-in-action">Developer in Action</NavLink>
-            <NavLink href="#experience">Experience</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#achievements">Achievements</NavLink>
-            <NavLink href="#certificates">Certificates</NavLink>
-            <NavLink href="#projects">Projects</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+          <nav className="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-5 flex-1 justify-end ml-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-200 hover:text-amber-400 font-semibold transition-all duration-200 text-sm lg:text-[15px] whitespace-nowrap px-2 py-1.5 rounded-lg hover:bg-amber-400/10 shrink-0"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Hamburger - mobile only */}
           <button
-            className="md:hidden text-white focus:outline-none p-2"
+            className="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-gray-800 transition-colors shrink-0"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            {isOpen ? <FiX size={24} className="text-amber-400" /> : <FiMenu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-gray-900 shadow-lg border-b border-gray-800"
-        >
-          <div className="container mx-auto px-6 py-4">
-            <nav className="flex flex-col space-y-4">
-              <MobileNavLink href="#home" onClick={() => setIsOpen(false)}>Home</MobileNavLink>
-              <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
-              <MobileNavLink href="#developer-in-action" onClick={() => setIsOpen(false)}>Developer in Action</MobileNavLink>
-              <MobileNavLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileNavLink>
-              <MobileNavLink href="#skills" onClick={() => setIsOpen(false)}>Skills</MobileNavLink>
-              <MobileNavLink href="#achievements" onClick={() => setIsOpen(false)}>Achievements</MobileNavLink>
-              <MobileNavLink href="#certificates" onClick={() => setIsOpen(false)}>Certificates</MobileNavLink>
-              <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
-              <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>Contact</MobileNavLink>
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden overflow-hidden bg-gray-900 border-b border-gray-800"
+          >
+            <nav className="flex flex-col px-6 py-4 space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-200 hover:text-amber-400 font-semibold transition-colors block py-3 text-base border-b border-gray-800/60 last:border-0"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
-  );
-};
-
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  return (
-    <a
-      href={href}
-      className="text-gray-200 hover:text-amber-400 font-medium transition-colors text-xs lg:text-sm"
-    >
-      {children}
-    </a>
-  );
-};
-
-const MobileNavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => {
-  return (
-    <a
-      href={href}
-      className="text-gray-200 hover:text-amber-400 font-medium transition-colors block py-2 text-base"
-      onClick={onClick}
-    >
-      {children}
-    </a>
   );
 };
 
