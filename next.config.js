@@ -3,16 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   distDir: 'build',
-  images: {
-    unoptimized: true,
-  },
-  webpack: (config, { dev }) => {
-    if (dev) {
-      // Disable filesystem cache in dev to prevent disk space issues
-      config.cache = false;
-    }
-    return config;
-  },
+  images: { unoptimized: true },
+  turbopack: {},
 };
 
 module.exports = nextConfig;
