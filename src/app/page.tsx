@@ -11,6 +11,7 @@ import Certificates from "../components/Certificates";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import NoupeChatbotPopup from "../components/NoupeChatbotPopup";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <NoupeChatbotPopup />
     </div>
   );
 }

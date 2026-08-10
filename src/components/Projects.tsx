@@ -612,6 +612,49 @@ const Projects = () => {
   frontendUrl: "https://ai-data-science-llm-studio-7eppgxdehbjgwd3gewgtgr.streamlit.app/",
   liveUrl: "https://ai-data-science-llm-studio-7eppgxdehbjgwd3gewgtgr.streamlit.app/"
 },
+{
+  id: 27,
+
+  title: "Veylix — AI-Powered Code Editor",
+
+  description:
+    "Veylix is an AI-native code editor designed to bring agentic AI directly into the software development workflow. Built with React, Monaco Editor, FastAPI, WebSockets, LangChain, LangGraph, MCP, and RAG, it enables developers to understand codebases, retrieve relevant context, generate and modify code, execute Python, analyze errors, interact with project files, and iterate through an intelligent development workflow. The platform supports multiple AI providers including Groq, Google Gemini, and OpenRouter, along with real-time AI streaming, Copilot-style ghost text, codebase search, linting, Git integration, code diffing, an integrated terminal, and AI-powered developer tools.",
+
+  image: "/CODEWAS.mp4",
+
+  poster: "/CODEWAS.png",
+
+  technologies: [
+    "React",
+    "Monaco Editor",
+    "FastAPI",
+    "Python",
+    "WebSockets",
+    "LangChain",
+    "LangGraph",
+    "MCP",
+    "RAG",
+    "FAISS",
+    "Sentence Transformers",
+    "Groq",
+    "Google Gemini",
+    "OpenRouter",
+    "AI Agents",
+    "LLMs",
+    "Code Execution",
+    "Real-Time AI Streaming",
+    "Git Integration"
+  ],
+
+  githubUrl:
+    "https://github.com/Vaibhavsable451/Ai-Code-Editor",
+
+  frontendUrl:
+    "https://ai-code-editor-frontend.onrender.com/",
+
+  liveUrl:
+    "https://ai-code-editor-frontend.onrender.com/"
+},
   ];
 
   return (
