@@ -28,13 +28,15 @@ const Experience = () => {
         'Worked on real-world projects using Spring Boot, React, MySQL, MongoDB, REST APIs, JavaScript, TypeScript, and Node.js',
         'Demonstrated punctuality, dedication, and problem-solving skills'
       ],
-      skills: ['Java', 'Spring Boot', 'MySQL', 'REST APIs'],
+      skills: ['Java', 'Spring Boot', 'React', 'TypeScript', 'Redux Toolkit', 'MySQL', 'MongoDB', 'REST APIs', 'JWT', 'Stripe', 'Razorpay', 'Gemini API', 'Node.js', 'JavaScript', 'Tailwind CSS', 'MUI', 'Spring AI', 'Kafka', 'Keycloak', 'OAuth2'],
       certificates: [
         {
           name: 'Java Developer Internship Certificate',
           url: 'https://drive.google.com/file/d/19fhIbVj94Q9v58jYKvuE3QvEpZqWyUAb/view'
         }
-      ]
+      ],
+      githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor',
+      projectImage: '/muti vendor ecommerce platform.png'
     },
     {
       id: 2,
