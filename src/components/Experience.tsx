@@ -2,6 +2,15 @@ import { motion } from 'framer-motion';
 import { FiBriefcase, FiCalendar, FiGithub } from 'react-icons/fi';
 import Image from 'next/image';
 
+interface ProjectPreview {
+  title: string;
+  image: string;
+  githubUrl?: string;
+  liveUrl?: string;
+  frontendUrl?: string;
+  backendUrl?: string;
+}
+
 interface ExperienceItem {
   id: number;
   position: string;
@@ -13,6 +22,7 @@ interface ExperienceItem {
   certificates?: { name: string; url: string }[];
   githubUrl?: string;
   projectImage?: string;
+  projects?: ProjectPreview[];
 }
 
 const Experience = () => {
@@ -35,8 +45,35 @@ const Experience = () => {
           url: 'https://drive.google.com/file/d/19fhIbVj94Q9v58jYKvuE3QvEpZqWyUAb/view'
         }
       ],
-      githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor',
-      projectImage: '/muti vendor ecommerce platform.png'
+      projects: [
+        {
+          title: 'Multivendor Ecommerce Platform',
+          image: '/muti vendor ecommerce platform.png',
+          githubUrl: 'https://github.com/Vaibhavsable451/Ecommerce_multivendor',
+          liveUrl: 'https://ecommerce-multivendor-1.onrender.com/',
+          frontendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/',
+          backendUrl: 'https://ecommerce-multivendor-yu62.onrender.com/'
+        },
+        {
+          title: 'Employee Management System',
+          image: '/employee.png',
+          githubUrl: 'https://github.com/Vaibhavsable451/Employee-Management-System',
+          liveUrl: 'https://employee-management-system-blond-eight.vercel.app/',
+          frontendUrl: 'https://employee-management-system-blond-eight.vercel.app/',
+          backendUrl: 'https://employee-management-system-1-dg6r.onrender.com/'
+        },
+        {
+          title: 'AI Resume Match & Job Recommender',
+          image: '/resume-analyzer.png',
+          githubUrl: 'https://github.com/Vaibhavsable451/Resume-Anlayzer',
+          liveUrl: 'https://resume-anlayzer.onrender.com/'
+        },
+        {
+          title: 'AI-Powered Fitness App',
+          image: '/fitness-app.png',
+          githubUrl: 'https://github.com/Vaibhavsable451/AI-Powered-Fitness-App-With-Spring-Boot-Microservices'
+        }
+      ]
     },
     {
       id: 2,
@@ -148,6 +185,61 @@ const Experience = () => {
                           sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-cover transition-transform duration-500 hover:scale-105"
                         />
+                      </div>
+                    )}
+
+                    {exp.projects && exp.projects.length > 0 && (
+                      <div className="mt-5">
+                        <div className="flex items-center mb-3">
+                          <svg className="w-4 h-4 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h7a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                          </svg>
+                          <h5 className="text-sm font-bold text-white">Projects Built During Internship</h5>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          {exp.projects.map((proj, pi) => (
+                            <div key={pi} className="bg-gray-800 border border-gray-600 rounded-lg overflow-hidden hover:border-blue-500/50 transition-all duration-300 group">
+                              <div className="relative aspect-video w-full overflow-hidden">
+                                <Image
+                                  src={proj.image}
+                                  alt={proj.title}
+                                  fill
+                                  sizes="(max-width: 640px) 100vw, 50vw"
+                                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                              <div className="p-3">
+                                <p className="text-white text-sm font-semibold mb-2 truncate">{proj.title}</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {proj.liveUrl && (
+                                    <a href={proj.liveUrl} target="_blank" rel="noopener noreferrer"
+                                      className="inline-flex items-center px-2.5 py-1 bg-yellow-500 hover:bg-yellow-600 text-gray-900 text-xs font-semibold rounded transition-colors">
+                                      <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                      Live Demo
+                                    </a>
+                                  )}
+                                  {proj.frontendUrl && (
+                                    <span className="inline-flex items-center px-2.5 py-1 bg-purple-600/20 text-purple-400 border border-purple-600/50 text-xs font-semibold rounded">
+                                      Frontend
+                                    </span>
+                                  )}
+                                  {proj.backendUrl && (
+                                    <span className="inline-flex items-center px-2.5 py-1 bg-green-600/20 text-green-400 border border-green-600/50 text-xs font-semibold rounded">
+                                      Backend
+                                    </span>
+                                  )}
+                                  {proj.githubUrl && (
+                                    <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer"
+                                      className="inline-flex items-center px-2.5 py-1 bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold rounded transition-colors">
+                                      <FiGithub className="w-3 h-3 mr-1" />
+                                      Code
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                     
