@@ -655,6 +655,65 @@ const Projects = () => {
   liveUrl:
     "https://ai-code-editor-frontend.onrender.com/"
 },
+{
+  id: 28,
+  title: "AI Finance Assistant Agent",
+  description:
+    "AI Finance Assistant Agent is an intelligent personal finance automation system built with n8n, Groq, Google Sheets, Gmail, and a custom HTML/CSS/JavaScript chat interface. Users can naturally log expenses and income, analyze spending patterns, view transaction totals and category insights, and receive automated email confirmations and finance summaries. The AI agent uses Groq for reasoning and tool calling, while n8n orchestrates the workflow between the chat interface, Google Sheets transaction ledger, and Gmail. The project demonstrates practical agentic AI, workflow automation, tool calling, session-based conversations, and real-world financial data management.",
+  image: "/Transaction.mp4",
+  poster: "/Transaction.png",
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "n8n",
+    "Groq",
+    "Qwen",
+    "Google Sheets",
+    "Gmail",
+    "AI Agent",
+    "Tool Calling",
+    "Workflow Automation",
+    "Webhook",
+    "Chat Memory",
+    "Prompt Engineering",
+    "Personal Finance",
+    "Agentic AI"
+  ],
+  githubUrl: "https://github.com/Vaibhavsable451/FinPassbookAI.git",
+  frontendUrl: "https://fin-passbook-ai.vercel.app/",
+  liveUrl: "https://fin-passbook-ai.vercel.app/"
+},
+{
+  id: 29,
+  title: "Resume Intelligence & ATS Optimizer",
+  description:
+    "Resume Intelligence & ATS Optimizer is an AI-powered resume analysis platform built with HTML, CSS, Vanilla JavaScript, Python, and the Groq API. It evaluates resumes against job descriptions, generates ATS scores with detailed subscores, identifies skill gaps, rewrites resume bullet points using the STAR methodology, and provides job match recommendations. The platform also includes resume parsing, an offline heuristic fallback, OTP-based access verification, and a production-ready Vercel deployment. The project demonstrates practical Generative AI integration, prompt engineering, resume intelligence, API integration, frontend engineering, and AI-powered career automation.",
+  image: "/ResumeIntelligence.mp4",
+  poster: "/ResumeIntelligence.png",
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "Groq API",
+    "Llama",
+    "Qwen",
+    "Resume Parsing",
+    "ATS Optimization",
+    "Prompt Engineering",
+    "AI Career Assistant",
+    "Skill Gap Analysis",
+    "STAR Methodology",
+    "REST API",
+    "OTP Authentication",
+    "Vercel"
+  ],
+  githubUrl: "https://github.com/Vaibhavsable451/Resume-Intelligence-ATS-Optimizer.git",
+  frontendUrl: "https://resume-intelligence-ats-optimizer-zeta.vercel.app/",
+  liveUrl: "https://resume-intelligence-ats-optimizer-zeta.vercel.app/"
+},
+
   ];
 
   return (
