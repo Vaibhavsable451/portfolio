@@ -36,22 +36,37 @@ const Projects = () => {
   }, []);
 
   useEffect(() => {
-    if (showVideo && selectedVideo && modalVideoRef.current) {
-      const video = modalVideoRef.current;
-      video.muted = false;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(() => {
-            video.muted = true;
-            video.play()
-              .then(() => setIsPlaying(true))
-              .catch((err) => console.log("Muted autoplay also prevented:", err));
-          });
+    if (showVideo && selectedVideo) {
+      // Safety timer to clear loading spinner after 2.5 seconds max
+      const timer = setTimeout(() => {
+        setIsVideoLoading(false);
+      }, 2500);
+
+      if (modalVideoRef.current) {
+        const video = modalVideoRef.current;
+        video.muted = false;
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+              setIsVideoLoading(false);
+            })
+            .catch(() => {
+              video.muted = true;
+              video.play()
+                .then(() => {
+                  setIsPlaying(true);
+                  setIsVideoLoading(false);
+                })
+                .catch((err) => {
+                  console.log("Muted autoplay also prevented:", err);
+                  setIsVideoLoading(false);
+                });
+            });
+        }
       }
+      return () => clearTimeout(timer);
     }
   }, [showVideo, selectedVideo]);
 
@@ -1021,7 +1036,7 @@ const Projects = () => {
             >
               {/* Loading Spinner for large video files */}
               {isVideoLoading && (
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-gray-950/80 backdrop-blur-sm">
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-gray-950/80 backdrop-blur-sm pointer-events-none">
                   <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4" />
                   <p className="text-gray-200 text-sm font-medium tracking-wide">Loading Video Demo...</p>
                 </div>
@@ -1036,6 +1051,8 @@ const Projects = () => {
                 preload="auto"
                 className="w-full max-h-[80vh] object-contain bg-black"
                 key={selectedVideo}
+                onLoadedData={() => setIsVideoLoading(false)}
+                onLoadedMetadata={() => setIsVideoLoading(false)}
                 onCanPlay={() => setIsVideoLoading(false)}
                 onWaiting={() => setIsVideoLoading(true)}
                 onPlay={() => {
@@ -1043,6 +1060,10 @@ const Projects = () => {
                   setIsVideoLoading(false);
                 }}
                 onPause={() => setIsPlaying(false)}
+                onError={() => {
+                  console.error("Video error or failed to load:", selectedVideo);
+                  setIsVideoLoading(false);
+                }}
               />
 
               {/* Click to Play Overlay if paused */}
