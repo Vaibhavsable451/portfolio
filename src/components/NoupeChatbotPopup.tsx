@@ -46,29 +46,18 @@ export default function NoupeChatbotPopup() {
         }
       }
 
-      // Find visible launcher elements (EXCLUDING SCRIPT tags!)
-      const allElements = Array.from(
+      // Target strictly Noupe chatbot elements in DOM (excluding script tags)
+      const noupeTargets = Array.from(
         document.querySelectorAll<HTMLElement>(
-          'iframe, button, div[id*="noupe"], div[class*="noupe"], div[id*="chat"], div[class*="chat"], a'
+          'iframe[src*="noupe"], [id*="noupe"], [class*="noupe"]'
         )
-      );
+      ).filter((el) => el.tagName !== "SCRIPT" && el.id !== scriptId);
 
-      const launchers = allElements.filter((el) => {
-        if (el.tagName === "SCRIPT" || el.id === scriptId) return false;
-        const style = window.getComputedStyle(el);
-        const isFixed = style.position === "fixed" || style.position === "absolute";
-        const rightPx = parseInt(style.right, 10);
-        const bottomPx = parseInt(style.bottom, 10);
-        const isBottomRight = (!isNaN(rightPx) && rightPx < 120) || (!isNaN(bottomPx) && bottomPx < 120);
-        return isFixed || isBottomRight || el.id.toLowerCase().includes("noupe") || el.className.toString().toLowerCase().includes("noupe");
-      });
-
-      launchers.forEach((el) => {
+      noupeTargets.forEach((target) => {
         try {
-          el.click();
-          el.parentElement?.click();
+          target.click();
           const evt = new MouseEvent("click", { bubbles: true, cancelable: true, view: window });
-          el.dispatchEvent(evt);
+          target.dispatchEvent(evt);
         } catch {
           // ignore
         }
