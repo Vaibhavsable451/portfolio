@@ -749,9 +749,9 @@ const Projects = () => {
               className={`flex flex-col w-full ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-4 md:gap-10 items-center`}
             >
               <motion.div
-                className="w-full lg:w-1/2 relative overflow-hidden rounded-2xl shadow-2xl group mx-auto max-w-2xl border border-white/10 backdrop-blur-md bg-white/5 transform-gpu transition-all duration-500 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/20"
+                className="w-full lg:w-1/2 relative overflow-hidden rounded-2xl shadow-2xl group mx-auto max-w-2xl border border-white/10 backdrop-blur-md bg-white/5 transform-gpu transition-all duration-500 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/20 cursor-pointer"
                 whileHover={{ y: -5 }}
-                onClick={() => project.image?.endsWith('.mp4') && handleVideoToggle(project.image)}
+                onClick={() => project.image?.toLowerCase().endsWith('.mp4') && handleVideoToggle(project.image)}
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-gray-900/40">
                   {project.images ? (
@@ -773,7 +773,7 @@ const Projects = () => {
                     </div>
                   ) : (
                     <>
-                      {isClient && project.image?.endsWith('.mp4') ? (
+                      {isClient && project.image?.toLowerCase().endsWith('.mp4') ? (
                         <div className="relative w-full h-full">
                           <video
                             className="w-full h-full object-cover"
@@ -792,28 +792,28 @@ const Projects = () => {
                           fill
                           sizes="(max-width: 768px) 100vw, 50vw"
                           style={{ objectFit: project.id === 6 ? 'contain' : 'cover' }}
-                          className={`transition-transform duration-500 group-hover:scale-105 ${project.image?.endsWith('.mp4') ? 'cursor-pointer' : ''}`}
+                          className={`transition-transform duration-500 group-hover:scale-105 ${project.image?.toLowerCase().endsWith('.mp4') ? 'cursor-pointer' : ''}`}
                           priority={index < 2 || project.id === 6}
                         />
                       )}
-                      {project.image?.endsWith('.mp4') && (
+                      {project.image?.toLowerCase().endsWith('.mp4') && (
                         <div
-                          className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                          className="absolute inset-0 z-20 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
                           onClick={(e) => {
                             e.stopPropagation();
                             handleVideoToggle(project.image);
                           }}
                         >
-                          <div className="p-3 bg-gray-800/80 rounded-full">
-                            <FiPlay className="w-6 h-6 text-white" />
+                          <div className="p-4 bg-blue-600/90 rounded-full shadow-lg transform group-hover:scale-110 transition-transform">
+                            <FiPlay className="w-8 h-8 text-white ml-0.5" />
                           </div>
                         </div>
                       )}
                     </>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
                     <div className="p-6 w-full">
-                      <div className="flex justify-end space-x-4">
+                      <div className="flex justify-end space-x-4 pointer-events-auto">
                         {project.githubUrl && (
                           <a
                             href={project.githubUrl}
@@ -868,6 +868,14 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-3 items-center">
+                  {project.image?.toLowerCase().endsWith('.mp4') && (
+                    <button
+                      onClick={() => handleVideoToggle(project.image)}
+                      className="flex items-center justify-center px-4 py-2.5 h-10 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-colors font-medium whitespace-nowrap shadow-[0_0_15px_rgba(37,99,235,0.4)] cursor-pointer"
+                    >
+                      <FiPlay className="mr-2" /> Watch Demo Video
+                    </button>
+                  )}
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}

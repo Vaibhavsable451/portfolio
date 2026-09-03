@@ -27,8 +27,34 @@ interface ExperienceItem {
 
 const Experience = () => {
   const experiences: ExperienceItem[] = [
-    {
+     {
       id: 1,
+      position: 'Data Science Intern',
+      company: 'Internship Studio',
+      location: 'Remote',
+      duration: 'Jun 2025 - Dec 2025',
+      description: [
+        'Successfully completed a remote internship focused on data science and analytics, designing and implementing data pipelines that improved processing efficiency by 25%',
+        'Developed COVID-19 Data Analysis Using Python: Conducted exploratory data analysis (EDA), data cleaning, duplicate removal, date-time processing, aggregation, and feature engineering to identify trends across continents',
+        'Created advanced visualizations including histograms, scatter plots, pair plots, and bar charts using Matplotlib and Seaborn to communicate insights',
+        'Collaborated with teams to deliver data-driven insights and statistical analysis for business decision-making'
+      ],
+      skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Data Analysis', 'Exploratory Data Analysis', 'Machine Learning', 'Power BI', 'SQL', 'Statistics', 'Microsoft Excel', 'Artificial Intelligence'],
+      certificates: [
+        {
+          name: 'Data Science Internship Certificate',
+          url: 'https://drive.google.com/file/d/1qIMD9toS7GdY7eTcZZ10WJ90IKcdQHL2/view'
+        },
+        {
+          name: 'Data Science Completion Certificate',
+          url: 'https://drive.google.com/file/d/1ChxqA1_miqufHrPfMEpJmNVRO0hihqnj/view'
+        }
+      ],
+      githubUrl: 'https://github.com/Vaibhavsable451/Project-Internship',
+      projectImage: '/covid_analysis.png'
+    },
+    {
+      id: 2,
       position: 'Java Developer Intern',
       company: 'Profound Edutech Private Limited',
       location: 'Pune, Maharashtra, India',
@@ -75,32 +101,7 @@ const Experience = () => {
         }
       ]
     },
-    {
-      id: 2,
-      position: 'Data Science Intern',
-      company: 'Internship Studio',
-      location: 'Remote',
-      duration: 'Jun 2025 - Dec 2025',
-      description: [
-        'Successfully completed a remote internship focused on data science and analytics, designing and implementing data pipelines that improved processing efficiency by 25%',
-        'Developed COVID-19 Data Analysis Using Python: Conducted exploratory data analysis (EDA), data cleaning, duplicate removal, date-time processing, aggregation, and feature engineering to identify trends across continents',
-        'Created advanced visualizations including histograms, scatter plots, pair plots, and bar charts using Matplotlib and Seaborn to communicate insights',
-        'Collaborated with teams to deliver data-driven insights and statistical analysis for business decision-making'
-      ],
-      skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Data Analysis', 'Exploratory Data Analysis', 'Machine Learning', 'Power BI', 'SQL', 'Statistics', 'Microsoft Excel', 'Artificial Intelligence'],
-      certificates: [
-        {
-          name: 'Data Science Internship Certificate',
-          url: 'https://drive.google.com/file/d/1qIMD9toS7GdY7eTcZZ10WJ90IKcdQHL2/view'
-        },
-        {
-          name: 'Data Science Completion Certificate',
-          url: 'https://drive.google.com/file/d/1ChxqA1_miqufHrPfMEpJmNVRO0hihqnj/view'
-        }
-      ],
-      githubUrl: 'https://github.com/Vaibhavsable451/Project-Internship',
-      projectImage: '/covid_analysis.png'
-    }
+    
   ];
 
   return (
