@@ -33,6 +33,14 @@ const Projects = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (showVideo && selectedVideo && modalVideoRef.current) {
+      modalVideoRef.current.play().catch((err) => {
+        console.log("Modal video play error:", err);
+      });
+    }
+  }, [showVideo, selectedVideo]);
+
   const handleVideoToggle = (videoUrl?: string) => {
     if (videoUrl) {
       setSelectedVideo(videoUrl);
@@ -955,10 +963,11 @@ const Projects = () => {
               <video
                 ref={modalVideoRef}
                 src={selectedVideo}
+                autoPlay
                 controls
                 playsInline
-                preload="metadata"
-                className="w-full rounded-lg shadow-2xl"
+                preload="auto"
+                className="w-full rounded-lg shadow-2xl max-h-[80vh] object-contain bg-black"
                 key={selectedVideo}
               />
             </div>
