@@ -23,22 +23,6 @@ const Hero = () => {
     }
   }, []);
 
-  useEffect(() => {
-    // Load Noupe chatbot script
-    const script = document.createElement("script");
-    script.src =
-      "https://www.noupe.com/embed/019eff5b3747779da2c82804a17257f7c890.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script when component unmounts
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Video */}

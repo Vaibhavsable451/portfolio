@@ -31,10 +31,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="font-sans bg-gray-900 text-white antialiased">
         {children}
-        <Script
-          src="https://www.noupe.com/embed/019a9671388271df81b8562be216dc05102c.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

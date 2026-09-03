@@ -81,9 +81,9 @@ const Projects = () => {
   description:
     'Enterprise-grade Agentic AI governance and RAG platform built with FastAPI, LangGraph, LangChain, Groq, Pinecone, MySQL, Docker, Kubernetes, GitHub Actions, AWS EC2, and MLflow. Features multi-agent query routing, semantic document retrieval, PII redaction, prompt-injection detection, policy enforcement, hallucination detection, explainable risk scoring, JWT/RBAC authentication, observability, MLOps tracking, and production-ready CI/CD deployment. Designed with specialized Router, Retrieval, Compliance, Risk, and Response agents for secure and governed AI query processing.',
 
-  image: '/aegis-ai-platform.mp4',
+  image: '/Governce.mp4',
 
-  poster: '/aegis-ai-platform.png',
+  poster: '/Governce.png',
 
   technologies: [
     'Python',
