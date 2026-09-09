@@ -235,8 +235,8 @@ const Projects = () => {
   description:
     'A 29-node Multi-Agent AI Sales Intelligence Agent built with n8n that automates website analysis, company research, AI-powered pain point detection, personalized sales email generation, HTML report creation, lead tracking, and real-time Slack notifications. The system integrates Groq LLaMA 3.3, SerpAPI, Gmail API, Google Sheets API, and Slack API to deliver an end-to-end AI sales automation workflow.',
 
-  image: '/Salesa AIa gent.mp4',
-  poster: '/Salesa AIa gent.png',
+  image: '/sales-ai-agent.mp4',
+  poster: '/sales-ai-agent.png',
 
   technologies: [
     'n8n',
@@ -603,8 +603,8 @@ const Projects = () => {
   title: 'Dual AI Chat',
   description:
     'A multi-model AI chat application that enables users to compare responses from Groq Llama 3.3 70B, Google Gemini 2.5 Flash, and OpenRouter GPT-4o mini side-by-side in real time.',
-  image: '/Dual AI Chat.mp4',
-     poster: '/Dual AI Chat.png',
+  image: '/dual-ai-chat.mp4',
+     poster: '/dual-ai-chat.png',
   technologies: [
     'Groq',
     'Google Gemini',
@@ -644,8 +644,8 @@ const Projects = () => {
   title: "TalentFlow AI – Multi-Agent Recruitment Automation System",
   description:
     "An end-to-end multi-agent AI recruitment automation platform built with n8n that streamlines the hiring workflow from resume and job description analysis to ATS scoring, semantic candidate search, and automated recruiter email generation. The system orchestrates multiple AI agents using Google Gemini, Groq, OpenRouter fallback routing, Pinecone vector search, and Gmail API to deliver an explainable, production-oriented recruitment pipeline.",
-  image: "/TalentFlow AI.mp4",
-  poster: "/TalentFlow AI.png",
+  image: "/talentflow-ai.mp4",
+  poster: "/talentflow-ai.png",
   technologies: [
     "n8n Workflow Automation",
     "Google Gemini",
