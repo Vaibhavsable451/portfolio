@@ -2,6 +2,7 @@
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import AiInnovationHub from "../components/AiInnovationHub";
 import About from "../components/About";
 import DeveloperInAction from "../components/DeveloperInAction";
 import Experience from "../components/Experience";
@@ -12,12 +13,15 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import NoupeChatbotPopup from "../components/NoupeChatbotPopup";
+import AiChatWidget from "../components/AiChatWidget";
+import VoiceCommandNav from "../components/VoiceCommandNav";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
+      <AiInnovationHub />
       <About />
       <DeveloperInAction />
       <Experience />
@@ -28,6 +32,8 @@ export default function Home() {
       <Contact />
       <Footer />
       <NoupeChatbotPopup />
+      <AiChatWidget />
+      <VoiceCommandNav />
     </div>
   );
 }

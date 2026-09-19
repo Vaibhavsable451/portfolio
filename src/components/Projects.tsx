@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiPlay, FiX, FiCpu } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiPlay, FiX, FiCpu, FiVolume2, FiVolumeX } from 'react-icons/fi';
 import { useState, useEffect, useRef } from 'react';
 
 interface Project {
@@ -27,6 +27,28 @@ const Projects = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
   const [selectedArchImage, setSelectedArchImage] = useState<string | null>(null);
+  const [speakingProjectId, setSpeakingProjectId] = useState<number | null>(null);
+
+  const handleSpeakProject = (project: Project) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+
+    if (speakingProjectId === project.id) {
+      window.speechSynthesis.cancel();
+      setSpeakingProjectId(null);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const speechText = `Project: ${project.title}. ${project.description}. Built using technologies including ${project.technologies.slice(0, 6).join(", ")}.`;
+    const utterance = new SpeechSynthesisUtterance(speechText);
+    utterance.rate = 1.0;
+
+    utterance.onstart = () => setSpeakingProjectId(project.id);
+    utterance.onend = () => setSpeakingProjectId(null);
+    utterance.onerror = () => setSpeakingProjectId(null);
+
+    window.speechSynthesis.speak(utterance);
+  };
 
   useEffect(() => {
     setIsClient(true);
@@ -243,6 +265,32 @@ const Projects = () => {
       liveUrl: 'https://multi-agent-ai-research-systemgit-iwmmnrqhttqezs2zxdhtuz.streamlit.app/',
       architectureImage: '/multi_agent_research_architecture.png'
     },
+    {
+  id: 5,
+  title: 'ML Sentinel — Autonomous ML Intelligence Platform',
+  description:
+    'An autonomous ML intelligence platform for customer churn prediction with data quality profiling, model benchmarking, drift detection, explainability, fairness analysis, model risk governance, automated retraining, and human approval gates.',
+  image: '/Works.mp4',
+  poster: '/Works1.png',
+  
+  technologies: [
+    'Python',
+    'Scikit-learn',
+    'FastAPI',
+    'Streamlit',
+    'Machine Learning',
+    'Model Governance',
+    'Drift Detection',
+    'Explainable AI',
+    'Fairness',
+    'SageMaker',
+    'AWS'
+  ],
+  githubUrl:
+    'https://github.com/Vaibhavsable451/ML-Sentinel-Autonomous-ML-Intelligence-Platform',
+  liveUrl:
+    'http://3.208.162.120:8501/'
+},
     {
       id: 6,
   title: 'AI House Price Prediction System',
@@ -1072,6 +1120,24 @@ const Projects = () => {
                       <span className="relative z-10 text-white tracking-wide">Architecture Diagram</span>
                     </button>
                   )}
+                  <button
+                    onClick={() => handleSpeakProject(project)}
+                    className={`flex items-center justify-center px-4 py-2.5 h-10 rounded-lg text-xs font-bold transition-all whitespace-nowrap border ${
+                      speakingProjectId === project.id
+                        ? "bg-purple-600 text-white border-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.5)] animate-pulse"
+                        : "bg-purple-950/60 text-purple-300 border-purple-500/40 hover:bg-purple-600/30"
+                    }`}
+                  >
+                    {speakingProjectId === project.id ? (
+                      <>
+                        <FiVolumeX className="mr-1.5" size={14} /> Stop AI Voice
+                      </>
+                    ) : (
+                      <>
+                        <FiVolume2 className="mr-1.5 text-purple-400" size={14} /> AI Voice Narrator
+                      </>
+                    )}
+                  </button>
                 </div>
               </div>
             </motion.div>
