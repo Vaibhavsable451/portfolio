@@ -13,7 +13,6 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import NoupeChatbotPopup from "../components/NoupeChatbotPopup";
-import AiChatWidget from "../components/AiChatWidget";
 import VoiceCommandNav from "../components/VoiceCommandNav";
 
 export default function Home() {
@@ -32,7 +31,6 @@ export default function Home() {
       <Contact />
       <Footer />
       <NoupeChatbotPopup />
-      <AiChatWidget />
       <VoiceCommandNav />
     </div>
   );
