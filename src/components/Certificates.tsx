@@ -37,7 +37,7 @@ const certificatesList: Certificate[] = [
     title: 'Full Stack Java Development',
     issuer: 'Profound Edutech / Simplilearn',
     category: 'Full Stack Java',
-    image: '/JavaTech.png',
+    image: '/Screenshot 2026-09-20 005335.png',
     description: 'Comprehensive certification in Java, Spring Boot, REST APIs, Microservices, React, and MySQL database management.',
   },
   {
@@ -189,7 +189,7 @@ const certificatesList: Certificate[] = [
     title: 'Java Technology & Enterprise Systems',
     issuer: 'Profound Edutech',
     category: 'Full Stack Java',
-    image: '/JavaTech.png',
+    image: '/Screenshot 2026-09-20 005351.png',
     description: 'Enterprise Java technologies including JDBC, Servlets, JSP, Hibernate, Spring, and database design.',
   },
   {
@@ -407,10 +407,13 @@ const Certificates = () => {
   const cert = slides[index];
 
   return (
-    <section id="certificates" className="bg-gray-950 relative overflow-hidden">
+    <section id="certificates" className="py-20 bg-gray-950 relative overflow-hidden">
+      {/* Background blobs for depth */}
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      {/* ── HEADING (stays centered) ── */}
-      <div className="py-16 container mx-auto px-4 relative z-10 text-center">
+      {/* ── HEADING ── */}
+      <div className="container mx-auto px-6 relative z-10 text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-4 text-sm font-semibold">
           <FiShield className="text-amber-400" /> Verified Credentials
         </div>
@@ -419,100 +422,136 @@ const Certificates = () => {
         </h2>
         <div className="w-24 h-1 bg-amber-500 mx-auto mb-4 rounded-full" />
         <p className="text-gray-400 text-base max-w-2xl mx-auto">
-          {slides.length} certificates — auto-displaying every 2 seconds
+          {slides.length} verified certificates — auto-displaying every 2 seconds
         </p>
       </div>
 
-      {/* ── FULL 100vw × 100vh SLIDESHOW — no container, no padding, no rounded ── */}
-      <div
-        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden bg-white"
-        style={{ height: '100vh' }}
-      >
-        {/* Certificate image fills every pixel */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={cert.image}
-              alt={cert.title}
-              fill
-              sizes="100vw"
-              className="object-contain object-center"
-              priority
-            />
-          </motion.div>
-        </AnimatePresence>
+      {/* ── STUNNING FULL-VIEW CERTIFICATE DISPLAY CARD ── */}
+      <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-6xl">
+        <div className="relative rounded-3xl overflow-hidden bg-gray-900/90 border border-gray-800 shadow-2xl backdrop-blur-xl">
+          
+          {/* Top Info Bar */}
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-800 bg-gray-950/80 z-20 relative">
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                <span className="text-amber-300 text-xs font-bold tracking-wider uppercase">AUTO PLAY</span>
+              </div>
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gray-800 text-amber-400 border border-gray-700">
+                {cert.category}
+              </span>
+            </div>
 
-        {/* Bottom gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-10" />
-
-        {/* Top-left: AUTO + category */}
-        <div className="absolute top-5 left-6 z-20 flex flex-col gap-2 pointer-events-none">
-          <div className="flex items-center gap-2 bg-black/75 backdrop-blur-sm px-3 py-1.5 rounded-full border border-amber-500/50 w-fit">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-            <span className="text-amber-300 text-[11px] font-bold tracking-widest">AUTO</span>
+            <div className="text-xs font-mono font-bold text-gray-400 bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700">
+              {index + 1} <span className="text-gray-600">/</span> {slides.length}
+            </div>
           </div>
-          <div className="bg-black/60 backdrop-blur-sm px-3 py-1 rounded-xl border border-gray-700/50 w-fit">
-            <p className="text-amber-200 text-[11px] font-semibold">{cert.category}</p>
+
+          {/* Certificate Image Frame */}
+          <div className="relative w-full h-[55vh] md:h-[65vh] min-h-[400px] max-h-[680px] bg-gray-950 flex items-center justify-center overflow-hidden">
+            {/* Ambient Blurred Background Layer (No plain white bars) */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`blur-${index}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.25 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={cert.image}
+                  alt=""
+                  fill
+                  className="object-cover blur-3xl"
+                  unoptimized
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Crisp Uncropped Main Certificate Image */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`img-${index}`}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.35, ease: 'easeInOut' }}
+                className="absolute inset-0 p-4 md:p-8 flex items-center justify-center"
+              >
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1200px"
+                  className="object-contain object-center drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
-        </div>
 
-        {/* Top-right: counter */}
-        <div className="absolute top-5 right-6 z-20 bg-black/75 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-700 text-gray-300 text-xs font-mono font-semibold pointer-events-none">
-          {index + 1} <span className="text-gray-600">/</span> {slides.length}
-        </div>
-
-        {/* Bottom: title + issuer */}
-        <div className="absolute bottom-8 left-0 right-0 z-20 px-8 md:px-16 pointer-events-none">
-          <AnimatePresence mode="wait">
+          {/* Progress Bar */}
+          <div className="w-full h-1 bg-gray-800 relative z-20">
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -14 }}
-              transition={{ duration: 0.3 }}
-            >
-              <h3 className="text-white font-bold text-2xl md:text-4xl drop-shadow-2xl line-clamp-2 max-w-3xl">
-                {cert.title}
-              </h3>
-              <p className="text-amber-300 text-base mt-1 font-medium drop-shadow">{cert.issuer}</p>
-            </motion.div>
-          </AnimatePresence>
+              key={key}
+              className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-300"
+              initial={{ width: '0%' }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 2, ease: 'linear' }}
+            />
+          </div>
+
+          {/* Dedicated Bottom Details Panel (Zero image overlap!) */}
+          <div className="p-6 md:p-8 bg-gray-900 border-t border-gray-800">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`text-${index}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col md:flex-row md:items-center justify-between gap-4"
+              >
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
+                    {cert.title}
+                  </h3>
+                  <p className="text-amber-400 font-semibold text-sm">
+                    Issued by: {cert.issuer}
+                  </p>
+                  {cert.description && (
+                    <p className="text-gray-400 text-xs md:text-sm mt-2 max-w-4xl leading-relaxed">
+                      {cert.description}
+                    </p>
+                  )}
+                </div>
+
+                <div className="shrink-0 flex items-center gap-2">
+                  <span className="px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 font-bold text-xs flex items-center gap-1.5">
+                    <FiShield className="text-amber-400" /> Verified Credential
+                  </span>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
 
-        {/* Progress bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/40 z-30">
-          <motion.div
-            key={key}
-            className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-300"
-            initial={{ width: '0%' }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 2, ease: 'linear' }}
-          />
+        {/* Dot Indicators */}
+        <div className="pt-6 pb-2 flex items-center justify-center flex-wrap gap-1.5">
+          {slides.map((_, i) => (
+            <div
+              key={i}
+              className={`rounded-full transition-all duration-300 ${
+                i === index ? 'w-6 h-2 bg-amber-400' : 'w-2 h-2 bg-gray-700'
+              }`}
+            />
+          ))}
         </div>
+        <p className="text-center text-xs text-gray-500 pb-4">
+          Showing certificate {index + 1} of {slides.length} · auto-advances every 2 seconds
+        </p>
       </div>
-
-      {/* Dot indicators below slideshow */}
-      <div className="py-4 flex items-center justify-center flex-wrap gap-1.5">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            className={`rounded-full transition-all duration-300 ${
-              i === index ? 'w-5 h-2 bg-amber-400' : 'w-2 h-2 bg-gray-700'
-            }`}
-          />
-        ))}
-      </div>
-      <p className="text-center text-xs text-gray-600 pb-8 flex items-center justify-center gap-1.5">
-        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse inline-block" />
-        {index + 1} of {slides.length} verified certificates · auto-changes every 2 seconds
-      </p>
     </section>
   );
 };
