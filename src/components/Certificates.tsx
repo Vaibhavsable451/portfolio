@@ -85,7 +85,7 @@ const certificatesList: Certificate[] = [
     title: 'MERN Stack Specialization',
     issuer: 'Coursera / Udemy',
     category: 'Full Stack MERN',
-    image: '/muti vendor ecommerce platform.png',
+    image: '/Screenshot 2026-09-20 005303.png',
     description: 'Full stack development specialization covering MongoDB, Express.js, React.js, Redux, Node.js, and JWT Authentication.',
   },
   {
@@ -149,7 +149,7 @@ const certificatesList: Certificate[] = [
     title: 'MERN Stack Web Development',
     issuer: 'Udemy / Coursera',
     category: 'Full Stack MERN',
-    image: '/muti vendor ecommerce platform.png',
+    image: '/Screenshot 2026-09-20 005324.png',
     description: 'Complete hands-on certification building scalable web applications using React, Node.js, Express, and MongoDB.',
   },
   {
