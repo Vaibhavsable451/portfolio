@@ -170,12 +170,13 @@ const Contact = () => {
                   LinkedIn Profile
                 </a>
                 <a
-                  href="/Vaibhav_Sable_Portfolio_Knowledge_Base.pdf"
-                  download="Vaibhav_Sable_Resume.pdf"
+                  href="https://drive.google.com/file/d/1mnJoh5XdxASo4ygLzlKW9H41zHqmeksi/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-xl font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 cursor-pointer"
                 >
                   <FiFileText className="text-lg text-amber-400" />
-                  Download Resume
+                  View Resume (Google Drive)
                 </a>
               </div>
 
