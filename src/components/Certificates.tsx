@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiAward, FiEye, FiX, FiShield, FiExternalLink, FiChevronLeft, FiChevronRight, FiFilter, FiSearch } from 'react-icons/fi';
+import { FiShield } from 'react-icons/fi';
 import Image from 'next/image';
 
 interface Certificate {
@@ -37,7 +37,7 @@ const certificatesList: Certificate[] = [
     title: 'Full Stack Java Development',
     issuer: 'Profound Edutech / Simplilearn',
     category: 'Full Stack Java',
-    image: '/Full Stack Java Development.png',
+    image: '/JavaTech.png',
     description: 'Comprehensive certification in Java, Spring Boot, REST APIs, Microservices, React, and MySQL database management.',
   },
   {
@@ -85,7 +85,7 @@ const certificatesList: Certificate[] = [
     title: 'MERN Stack Specialization',
     issuer: 'Coursera / Udemy',
     category: 'Full Stack MERN',
-    image: '/MERN Stack Front To Back Full Stack React, Redux & Node.js Specialization.png',
+    image: '/muti vendor ecommerce platform.png',
     description: 'Full stack development specialization covering MongoDB, Express.js, React.js, Redux, Node.js, and JWT Authentication.',
   },
   {
@@ -149,7 +149,7 @@ const certificatesList: Certificate[] = [
     title: 'MERN Stack Web Development',
     issuer: 'Udemy / Coursera',
     category: 'Full Stack MERN',
-    image: '/Mern Stack.png',
+    image: '/muti vendor ecommerce platform.png',
     description: 'Complete hands-on certification building scalable web applications using React, Node.js, Express, and MongoDB.',
   },
   {
@@ -388,261 +388,131 @@ const certificatesList: Certificate[] = [
   },
 ];
 
-const categories = ['All', 'Generative AI', 'Full Stack Java', 'Backend Engineering', 'Frontend Engineering', 'Data Analytics', 'Cloud Computing', 'Full Stack MERN', 'Software Engineering', 'Verified Screenshots'];
-
 const Certificates = () => {
-  const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
-  const [activeTab, setActiveTab] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const slides = certificatesList;
+  const [index, setIndex] = useState(0);
+  const [key, setKey] = useState(0); // resets progress bar
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const filteredCertificates = certificatesList.filter((cert) => {
-    const matchesTab = activeTab === 'All' || cert.category === activeTab;
-    const matchesSearch =
-      cert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cert.issuer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cert.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesTab && matchesSearch;
-  });
+  // Auto-advance every 2 seconds — NO click, NO button
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+      setKey((k) => k + 1);
+    }, 2000);
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const openCert = (cert: Certificate) => {
-    setSelectedCert(cert);
-  };
-
-  const closeCert = () => {
-    setSelectedCert(null);
-  };
-
-  const navigateCert = (direction: 'next' | 'prev') => {
-    if (!selectedCert) return;
-    const currentList = filteredCertificates.length > 0 ? filteredCertificates : certificatesList;
-    const currentIndex = currentList.findIndex((c) => c.id === selectedCert.id);
-    let newIndex: number;
-    if (direction === 'next') {
-      newIndex = (currentIndex + 1) % currentList.length;
-    } else {
-      newIndex = (currentIndex - 1 + currentList.length) % currentList.length;
-    }
-    setSelectedCert(currentList[newIndex]);
-  };
+  const cert = slides[index];
 
   return (
-    <section id="certificates" className="py-20 bg-gray-950 relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <section id="certificates" className="bg-gray-950 relative overflow-hidden">
 
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-4 text-sm font-semibold">
-            <FiShield className="text-amber-400" /> Verified Credentials & Screenshots
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            📜 Verified Certifications & Credentials
-          </h2>
-          <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            High-resolution certificate documents and uploaded verification snapshots covering Generative AI, Cloud Computing, Full Stack Web Development, and Data Science.
-          </p>
-        </motion.div>
-
-        {/* Search & Filter Controls */}
-        <div className="mb-10 max-w-6xl mx-auto space-y-6">
-          {/* Search Bar */}
-          <div className="relative max-w-md mx-auto">
-            <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search certificates by title, issuer, category..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 text-sm transition-all shadow-inner"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs bg-gray-800 text-gray-400 hover:text-white px-2 py-1 rounded-md"
-              >
-                Clear
-              </button>
-            )}
-          </div>
-
-          {/* Category Filter Tabs */}
-          <div className="flex items-center justify-center flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveTab(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 border cursor-pointer ${
-                  activeTab === cat
-                    ? 'bg-amber-400 text-gray-950 border-amber-400 shadow-md shadow-amber-500/20'
-                    : 'bg-gray-900 text-gray-300 border-gray-800 hover:border-gray-700 hover:text-white'
-                }`}
-              >
-                {cat}
-                {cat === 'All' ? ` (${certificatesList.length})` : ''}
-              </button>
-            ))}
-          </div>
+      {/* ── HEADING (stays centered) ── */}
+      <div className="py-16 container mx-auto px-4 relative z-10 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-4 text-sm font-semibold">
+          <FiShield className="text-amber-400" /> Verified Credentials
         </div>
-
-        {/* Certificates Counter */}
-        <div className="text-center text-xs text-amber-400/80 mb-8 font-mono">
-          Showing {filteredCertificates.length} of {certificatesList.length} total verified certificates & screenshots
-        </div>
-
-        {/* Certificate Cards Grid */}
-        {filteredCertificates.length === 0 ? (
-          <div className="text-center py-16 bg-gray-900/50 rounded-2xl border border-gray-800 max-w-xl mx-auto">
-            <FiAward className="w-12 h-12 text-amber-400/40 mx-auto mb-3" />
-            <p className="text-gray-300 font-semibold mb-1">No certificates match your filter</p>
-            <p className="text-xs text-gray-500">Try changing your search query or selecting &quot;All&quot;</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCertificates.map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
-                viewport={{ once: true }}
-                onClick={() => openCert(cert)}
-                className="bg-gray-900/90 rounded-2xl overflow-hidden border border-gray-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl group cursor-pointer flex flex-col justify-between hover:-translate-y-1"
-              >
-                {/* Image Container */}
-                <div className="relative w-full aspect-[4/3] bg-gray-950 border-b border-gray-800/80 overflow-hidden">
-                  <Image
-                    src={cert.image}
-                    alt={cert.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    priority={index < 6}
-                  />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gray-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                    <span className="px-4 py-2 bg-amber-400 text-gray-950 text-xs font-bold rounded-full shadow-xl flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      <FiEye className="text-sm" /> Inspect Full Document
-                    </span>
-                  </div>
-                </div>
-
-                {/* Card Details */}
-                <div className="p-5 flex flex-col justify-between flex-grow">
-                  <div>
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[11px] px-2.5 py-0.5 bg-amber-500/10 text-amber-400 rounded-full border border-amber-500/30 font-semibold truncate max-w-[60%]">
-                        {cert.category}
-                      </span>
-                      <span className="text-[11px] text-gray-400 font-medium truncate max-w-[40%]">{cert.issuer}</span>
-                    </div>
-                    <h3 className="text-base font-bold text-white mb-2 leading-snug group-hover:text-amber-300 transition-colors line-clamp-2">
-                      {cert.title}
-                    </h3>
-                    {cert.description && (
-                      <p className="text-gray-400 text-xs mb-4 leading-relaxed line-clamp-2">
-                        {cert.description}
-                      </p>
-                    )}
-                  </div>
-
-                  <button className="w-full py-2 px-3 bg-amber-400/10 hover:bg-amber-400 text-amber-400 hover:text-gray-950 font-bold rounded-xl border border-amber-400/30 transition-all duration-200 flex items-center justify-center gap-2 text-xs mt-2">
-                    <FiEye className="text-xs" />
-                    <span>View Certificate</span>
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          📜 Verified Certifications &amp; Credentials
+        </h2>
+        <div className="w-24 h-1 bg-amber-500 mx-auto mb-4 rounded-full" />
+        <p className="text-gray-400 text-base max-w-2xl mx-auto">
+          {slides.length} certificates — auto-displaying every 2 seconds
+        </p>
       </div>
 
-      {/* High-Resolution Full Certificate Lightbox Modal */}
-      <AnimatePresence>
-        {selectedCert && (
+      {/* ── FULL 100vw × 100vh SLIDESHOW — no container, no padding, no rounded ── */}
+      <div
+        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden bg-white"
+        style={{ height: '100vh' }}
+      >
+        {/* Certificate image fills every pixel */}
+        <AnimatePresence mode="wait">
           <motion.div
+            key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={closeCert}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+            transition={{ duration: 0.35, ease: 'easeInOut' }}
+            className="absolute inset-0"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full bg-gray-900 rounded-2xl overflow-hidden border border-amber-500/40 shadow-2xl flex flex-col max-h-[92vh]"
-            >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-gray-900">
-                <div className="flex items-center gap-3 pr-4 overflow-hidden">
-                  <div className="p-2 bg-amber-500/10 text-amber-400 rounded-lg border border-amber-500/30 shrink-0">
-                    <FiAward className="w-5 h-5" />
-                  </div>
-                  <div className="truncate">
-                    <h3 className="text-base md:text-lg font-bold text-white truncate">{selectedCert.title}</h3>
-                    <p className="text-xs text-gray-400">{selectedCert.issuer} • {selectedCert.category}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={closeCert}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl transition-colors cursor-pointer shrink-0"
-                >
-                  <FiX className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Full Certificate Document Display */}
-              <div className="flex-grow relative bg-gray-950 p-2 min-h-[60vh] max-h-[72vh] flex items-center justify-center">
-                <div className="relative w-full h-full min-h-[50vh]">
-                  <Image
-                    src={selectedCert.image}
-                    alt={selectedCert.title}
-                    fill
-                    sizes="(max-width: 1200px) 100vw, 80vw"
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-
-              {/* Modal Footer */}
-              <div className="p-4 border-t border-gray-800 bg-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-                <span className="text-gray-400">Official verified certificate document</span>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => navigateCert('prev')}
-                    className="px-3.5 py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg font-medium transition-colors flex items-center gap-1 border border-gray-700 cursor-pointer"
-                  >
-                    <FiChevronLeft /> Previous
-                  </button>
-                  <button
-                    onClick={() => navigateCert('next')}
-                    className="px-3.5 py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg font-medium transition-colors flex items-center gap-1 border border-gray-700 cursor-pointer"
-                  >
-                    Next <FiChevronRight />
-                  </button>
-                  <a
-                    href={selectedCert.image}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold rounded-lg transition-colors flex items-center gap-1 shadow-sm"
-                  >
-                    <FiExternalLink /> Open High-Res File
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+            <Image
+              src={cert.image}
+              alt={cert.title}
+              fill
+              sizes="100vw"
+              className="object-contain object-center"
+              priority
+            />
           </motion.div>
-        )}
-      </AnimatePresence>
+        </AnimatePresence>
+
+        {/* Bottom gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-10" />
+
+        {/* Top-left: AUTO + category */}
+        <div className="absolute top-5 left-6 z-20 flex flex-col gap-2 pointer-events-none">
+          <div className="flex items-center gap-2 bg-black/75 backdrop-blur-sm px-3 py-1.5 rounded-full border border-amber-500/50 w-fit">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
+            <span className="text-amber-300 text-[11px] font-bold tracking-widest">AUTO</span>
+          </div>
+          <div className="bg-black/60 backdrop-blur-sm px-3 py-1 rounded-xl border border-gray-700/50 w-fit">
+            <p className="text-amber-200 text-[11px] font-semibold">{cert.category}</p>
+          </div>
+        </div>
+
+        {/* Top-right: counter */}
+        <div className="absolute top-5 right-6 z-20 bg-black/75 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-700 text-gray-300 text-xs font-mono font-semibold pointer-events-none">
+          {index + 1} <span className="text-gray-600">/</span> {slides.length}
+        </div>
+
+        {/* Bottom: title + issuer */}
+        <div className="absolute bottom-8 left-0 right-0 z-20 px-8 md:px-16 pointer-events-none">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h3 className="text-white font-bold text-2xl md:text-4xl drop-shadow-2xl line-clamp-2 max-w-3xl">
+                {cert.title}
+              </h3>
+              <p className="text-amber-300 text-base mt-1 font-medium drop-shadow">{cert.issuer}</p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Progress bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/40 z-30">
+          <motion.div
+            key={key}
+            className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-300"
+            initial={{ width: '0%' }}
+            animate={{ width: '100%' }}
+            transition={{ duration: 2, ease: 'linear' }}
+          />
+        </div>
+      </div>
+
+      {/* Dot indicators below slideshow */}
+      <div className="py-4 flex items-center justify-center flex-wrap gap-1.5">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            className={`rounded-full transition-all duration-300 ${
+              i === index ? 'w-5 h-2 bg-amber-400' : 'w-2 h-2 bg-gray-700'
+            }`}
+          />
+        ))}
+      </div>
+      <p className="text-center text-xs text-gray-600 pb-8 flex items-center justify-center gap-1.5">
+        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse inline-block" />
+        {index + 1} of {slides.length} verified certificates · auto-changes every 2 seconds
+      </p>
     </section>
   );
 };

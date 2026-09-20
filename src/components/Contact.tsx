@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiAlertCircle, FiGithub, FiLinkedin, FiFileText } from 'react-icons/fi';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -147,18 +147,48 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* Professional Profiles & Resume Buttons */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-400 mb-4">Connect on Professional Platforms</h4>
-              <div className="flex space-x-4">
-                <a href="https://leetcode.com/u/vaibhavsable122/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center text-amber-400 hover:bg-amber-400 hover:text-gray-950 transition-colors shadow-md">
-                  <span className="font-bold text-xs">LC</span>
+              <h4 className="text-sm font-semibold text-gray-400 mb-3">Official Profiles & Resume</h4>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <a
+                  href="https://github.com/Vaibhavsable451"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-gray-800 hover:bg-gray-700 text-white border border-gray-700 rounded-xl font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 cursor-pointer"
+                >
+                  <FiGithub className="text-lg text-amber-400" />
+                  GitHub Profile
                 </a>
-                <a href="https://codeforces.com/profile/vaibhavsable150" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-colors shadow-md">
-                  <span className="font-bold text-xs">CF</span>
+                <a
+                  href="https://www.linkedin.com/in/vaibhavsable-ai-engineer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-blue-950/60 hover:bg-blue-900/80 text-blue-200 border border-blue-700/60 rounded-xl font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 cursor-pointer"
+                >
+                  <FiLinkedin className="text-lg text-blue-400" />
+                  LinkedIn Profile
                 </a>
-                <a href="https://www.codechef.com/users/vaibhavsable" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center text-orange-400 hover:bg-orange-500 hover:text-white transition-colors shadow-md">
-                  <span className="font-bold text-xs">CC</span>
+                <a
+                  href="/Vaibhav_Sable_Portfolio_Knowledge_Base.pdf"
+                  download="Vaibhav_Sable_Resume.pdf"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-xl font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 cursor-pointer"
+                >
+                  <FiFileText className="text-lg text-amber-400" />
+                  Download Resume
+                </a>
+              </div>
+
+              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Competitive Programming Profiles</h4>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://leetcode.com/u/vaibhavsable122/" target="_blank" rel="noopener noreferrer" className="px-3.5 py-2 rounded-xl bg-gray-800 border border-gray-700 flex items-center gap-2 text-amber-400 hover:bg-amber-400 hover:text-gray-950 transition-colors shadow-md text-xs font-bold">
+                  <span>LeetCode Profile</span>
+                </a>
+                <a href="https://codeforces.com/profile/vaibhavsable150" target="_blank" rel="noopener noreferrer" className="px-3.5 py-2 rounded-xl bg-gray-800 border border-gray-700 flex items-center gap-2 text-blue-400 hover:bg-blue-600 hover:text-white transition-colors shadow-md text-xs font-bold">
+                  <span>Codeforces Profile</span>
+                </a>
+                <a href="https://www.codechef.com/users/vaibhavsable" target="_blank" rel="noopener noreferrer" className="px-3.5 py-2 rounded-xl bg-gray-800 border border-gray-700 flex items-center gap-2 text-orange-400 hover:bg-orange-500 hover:text-white transition-colors shadow-md text-xs font-bold">
+                  <span>CodeChef Profile</span>
                 </a>
               </div>
             </div>
