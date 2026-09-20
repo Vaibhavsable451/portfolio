@@ -9,7 +9,7 @@ export default function NoupeChatbotPopup() {
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
-      script.src = "https://www.noupe.com/embed/01a065bc7a3070008f0d9ad2e387491cff1e.js";
+      script.src = "https://www.noupe.com/embed/01a0bdc35be070008f7aef341a71d0456cbc.js";
       script.async = true;
       document.body.appendChild(script);
     }
@@ -25,7 +25,7 @@ export default function NoupeChatbotPopup() {
       // Check if Noupe iframe is present in DOM
       const noupeIframes = Array.from(document.querySelectorAll<HTMLIFrameElement>("iframe"));
       const noupeIframe = noupeIframes.find(
-        (iframe) => iframe.src.includes("noupe") || iframe.src.includes("01a065bc7a3070008f0d9ad2e387491cff1e") || iframe.id.includes("noupe") || iframe.className.includes("noupe")
+        (iframe) => iframe.src.includes("noupe") || iframe.src.includes("01a0bdc35be070008f7aef341a71d0456cbc") || iframe.id.includes("noupe") || iframe.className.includes("noupe")
       );
 
       if (noupeIframe) {
