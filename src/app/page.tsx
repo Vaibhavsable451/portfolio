@@ -2,7 +2,7 @@
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import AiInnovationHub from "../components/AiInnovationHub";
+import ImmediateJoiner from "../components/ImmediateJoiner";
 import About from "../components/About";
 import DeveloperInAction from "../components/DeveloperInAction";
 import Experience from "../components/Experience";
@@ -20,7 +20,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
-      <AiInnovationHub />
+      <ImmediateJoiner />
       <About />
       <DeveloperInAction />
       <Experience />

@@ -38,7 +38,7 @@ const About = () => {
 
             <p className="text-gray-300">
               I am passionate about designing intelligent systems that integrate data, APIs, and AI models to solve real-world problems efficiently.
-              I am currently seeking opportunities in AI Engineering and GenAI development roles.
+              I am an <strong>Immediate Joiner</strong> (zero notice period) actively seeking AI Engineering and GenAI development roles in Bangalore, Pune, Mumbai, Delhi, Hyderabad, Chennai, and Gurgaon.
             </p>
           </motion.div>
 

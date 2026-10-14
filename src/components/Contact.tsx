@@ -109,7 +109,7 @@ const Contact = () => {
                 Direct Contact Details
               </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                I am actively seeking software engineering, full stack development, and AI roles. Feel free to contact me directly via email or phone.
+                I am an <span className="text-yellow-400 font-semibold">Immediate Joiner</span> (zero notice period) actively seeking <strong className="text-white">AI Engineer, GenAI Developer &amp; ML Engineer</strong> roles. Open to opportunities in Bangalore, Pune, Mumbai, Delhi, Hyderabad, Chennai, Gurgaon (Haryana), and fully remote.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -141,7 +141,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 mb-1">Location</h4>
-                    <p className="text-lg font-bold text-white">Pune, Maharashtra, India</p>
+                    <p className="text-lg font-bold text-white">Pune, Maharashtra (Open to Relocation)</p>
+                    <p className="text-xs text-yellow-400 mt-1">📍 Bangalore · Mumbai · Delhi · Hyderabad · Chennai · Gurgaon</p>
                   </div>
                 </div>
               </div>

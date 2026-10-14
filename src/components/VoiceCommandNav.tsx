@@ -51,7 +51,7 @@ export default function VoiceCommandNav() {
 
   const handleCommand = (cmd: string) => {
     let targetId = "";
-    if (cmd.includes("ai hub") || cmd.includes("playground") || cmd.includes("voice twin")) targetId = "ai-hub";
+    if (cmd.includes("hiring") || cmd.includes("immediate") || cmd.includes("joiner") || cmd.includes("available")) targetId = "immediate-joiner";
     else if (cmd.includes("project") || cmd.includes("aegis") || cmd.includes("veylix")) targetId = "projects";
     else if (cmd.includes("experience") || cmd.includes("internship")) targetId = "experience";
     else if (cmd.includes("skill") || cmd.includes("tech")) targetId = "skills";
@@ -80,7 +80,7 @@ export default function VoiceCommandNav() {
               ? "bg-red-600 text-white animate-pulse"
               : "bg-blue-600/20 text-blue-400 hover:bg-blue-600/30 border border-blue-500/40"
           }`}
-          title="Click and say: 'Show Projects', 'Show AI Hub', 'Show Experience'"
+          title="Click and say: 'Show Projects', 'Show Hiring', 'Show Experience'"
         >
           {isListening ? <FiMicOff size={16} /> : <FiMic size={16} />}
         </button>
