@@ -977,6 +977,7 @@ const Projects = () => {
   liveUrl: "https://resume-intelligence-ats-optimizer-zeta.vercel.app/"
 },
 
+
   ];
 
   // ── Generate & download full projects PDF ──

@@ -5,6 +5,9 @@ import Image from 'next/image';
 interface ProjectPreview {
   title: string;
   image: string;
+  description?: string;
+  technologies?: string[];
+  poster?: string;
   githubUrl?: string;
   liveUrl?: string;
   frontendUrl?: string;
@@ -27,8 +30,135 @@ interface ExperienceItem {
 
 const Experience = () => {
   const experiences: ExperienceItem[] = [
+    
+
+{
+  id: 1,
+  position: 'Generative AI Intern',
+  company: 'Codomax Digital Solutions',
+  location: 'Remote',
+  duration: 'Oct 2026 - Nov 2026',
+  description: [
+    'Selected for a 30-day Generative AI internship at Codomax Digital Solutions, focusing on practical GenAI concepts, LLM application development, RAG systems, and AI agent workflows.',
+    'Explored Generative AI fundamentals, Large Language Models (LLMs), Transformers, and Responsible AI.',
+    'Applied Prompt Engineering techniques, including zero-shot and few-shot prompting.',
+    'Developed an AI Chat Application using LLM APIs, conversation history, and custom instructions.',
+    'Built a Retrieval-Augmented Generation (RAG) application using embeddings, vector databases, and semantic search.',
+    'Explored AI Agents, tool calling, memory, and multi-step automation workflows.',
+    'Developed a GenAI Capstone Project integrating LLM APIs, Prompt Engineering, RAG, and AI Agents.',
+    'Submitted GitHub repositories, technical documentation, and project deliverables for evaluation; all module submissions successfully approved.'
+  ],
+  skills: [
+    'Generative AI',
+    'Python',
+    'LLMs',
+    'Prompt Engineering',
+    'RAG',
+    'LangChain',
+    'Vector Databases',
+    'Embeddings',
+    'Semantic Search',
+    'AI Agents',
+    'Tool Calling',
+    'Conversation Memory',
+    'LLM APIs',
+    'Transformers',
+    'Responsible AI',
+    'GitHub'
+  ],
+  projects: [
+    {
+      title: 'GenAI Capstone Project',
+      description: 'Developed a Generative AI capstone integrating LLM APIs, prompt engineering, RAG, and AI agent workflows.',
+      technologies: ['Python', 'Generative AI', 'LLM APIs', 'RAG', 'AI Agents', 'Prompt Engineering'],
+      githubUrl: 'https://github.com/Vaibhavsable451/genai-capstone-projectCAstonr1.git'
+     liveUrl: 'https://techtaru-digital-taskgit-2hv2e657ibivscgkve4fgf.streamlit.app/'
+     projectImage: '/JOBSS.mp4',
+      poster: '/COP.png'
+    },
+    {
+      title: 'AI-Powered Digital Task Automation',
+      description: 'Developed an AI-powered application demonstrating practical AI workflow automation and interactive Streamlit deployment.',
+      technologies: ['Python', 'Streamlit', 'Generative AI', 'LLMs'],
+      githubUrl: 'https://github.com/Vaibhavsable451/techtaru-digital-task.git',
+      liveUrl: 'https://techtaru-digital-taskgit-2hv2e657ibivscgkve4fgf.streamlit.app/'
+       projectImage: '/Task1.mp4',
+      poster: '/Yellow.png'
+    },
+    {
+      title: 'AI Agent with Tools',
+      description: 'Built an AI agent capable of understanding user requests and routing tasks to specialized Python tools through function calling.',
+      technologies: ['Python', 'OpenAI Function Calling', 'LangChain Agents', 'Tool Calling'],
+      githubUrl: 'https://github.com/Vaibhavsable451/techtaru-digital-task.git',
+      liveUrl: 'https://techtaru-digital-task2-488xufcp8jlb8xbqhxs5il.streamlit.app/',
+      projectImage: '/Task2.mp4',
+      poster: '/red2.png'
+    },
+    {
+      title: 'Data Extraction Bot',
+      description: 'Developed an LLM-powered data extraction application that transforms unstructured text, such as resumes and invoices, into structured JSON outputs with validation.',
+      technologies: ['Python', 'Pydantic', 'OpenAI Structured Outputs', 'FastAPI', 'LLMs'],
+       liveUrl: 'https://techtaru-digital-task3-k8wk74cx8g6d9jcb5qmo8v.streamlit.app/',
+       projectImage: '/Task1.mp4',
+      poster: '/Blue3.png'
+    }
+  ],
+  githubUrl: 'https://github.com/Vaibhavsable451',
+  portfolioUrl: 'https://portfolio-wheat-six-apdmu7v0c7.vercel.app/'
+}
+
+,
+
+{
+  id: 2,
+  position: 'AI Engineer (Self-Directed Projects)',
+  company: 'Self-Employed',
+  location: 'Remote',
+  duration: 'Jan 2026 - Oct 2026',
+  description: [
+    'Independently designed, developed, and deployed 64+ hands-on AI projects spanning Generative AI, Agentic AI, Retrieval-Augmented Generation (RAG), AI Governance, Observability, and MLOps.',
+    'Built multi-agent AI platforms using LangGraph and LangChain, including an Enterprise AI Customer Support Platform with confidence-based escalation, deployed on AWS EC2 using K3s.',
+    'Developed advanced RAG pipelines using Pinecone and Sentence Transformers, implementing document chunking, embeddings, semantic search, and grounded response generation.',
+    'Implemented enterprise AI governance controls using Presidio for PII redaction, prompt-injection detection, hallucination checks, and explainable 0-100 risk scoring in AegisAI and NeuraGuard.',
+    'Developed secure backend services using FastAPI, JWT authentication, RBAC, and MySQL.',
+    'Containerized and deployed AI applications using Docker, Kubernetes, and GitHub Actions CI/CD.',
+    'Integrated MLflow for model evaluation and monitoring, agent observability, and human-in-the-loop approval workflows.',
+    'Published project source code on GitHub and maintained a portfolio showcasing deployed AI engineering projects.'
+  ],
+  skills: [
+    'Python',
+    'Generative AI',
+    'Agentic AI',
+    'LangChain',
+    'LangGraph',
+    'Retrieval-Augmented Generation (RAG)',
+    'Pinecone',
+    'Sentence Transformers',
+    'FastAPI',
+    'Machine Learning',
+    'AI Governance',
+    'Presidio',
+    'Prompt Injection Detection',
+    'Hallucination Detection',
+    'MLflow',
+    'MLOps',
+    'Docker',
+    'Kubernetes',
+    'AWS EC2',
+    'K3s',
+    'GitHub Actions',
+    'MySQL',
+    'JWT',
+    'RBAC',
+    'Observability'
+  ],
+  githubUrl: 'https://github.com/Vaibhavsable451',
+  portfolioUrl: 'https://portfolio-wheat-six-apdmu7v0c7.vercel.app/'
+
+}
+,
      {
-      id: 1,
+      id: 3,
       position: 'Data Science Intern',
       company: 'Internship Studio',
       location: 'Remote',
@@ -54,7 +184,7 @@ const Experience = () => {
       projectImage: '/covid_analysis.png'
     },
     {
-      id: 2,
+      id: 4,
       position: 'Java Developer Intern',
       company: 'Profound Edutech Private Limited',
       location: 'Pune, Maharashtra, India',
