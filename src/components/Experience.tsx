@@ -83,6 +83,36 @@ const MediaPreview = ({
 
 const Experience = () => {
   const experiences: ExperienceItem[] = [
+    {
+      id: 6,
+      position: 'Artificial Intelligence Intern',
+      company: 'Internship Studio',
+      location: 'Remote',
+      duration: 'Nov 2026 - Present',
+      description: [
+        'Undertaking a one-month, project-based AI training and internship program with structured training and hands-on project work.',
+        'Building foundational knowledge of Artificial Intelligence and Machine Learning through technical training and practical exercises.',
+        'Applying AI concepts through assigned project development and preparing a final AI project for submission.',
+        'A training and internship certificate will be awarded upon successful program completion and final project submission.'
+      ],
+      skills: ['Artificial Intelligence', 'Machine Learning', 'AI Fundamentals', 'Project Development']
+    },
+    {
+      id: 5,
+      position: 'Data Science & AI Intern',
+      company: 'InternCircle Internships',
+      location: 'Remote',
+      duration: 'Oct 2026 - Nov 2026',
+      description: [
+        'Participating in a one-month, self-paced, project-based virtual internship focused on Data Science and AI.',
+        'Working on five practical projects applying Python, data analytics, visualization, and machine learning to real-world datasets.',
+        'Performing exploratory data analysis with Pandas, including data cleaning, missing-value handling, and statistical analysis.',
+        'Creating visualizations with Matplotlib and Seaborn and analyzing e-commerce sales through feature engineering, date extraction, pivot tables, and revenue trends.',
+        'Building and evaluating supervised machine learning models with Scikit-Learn, and developing interactive prediction applications with Streamlit or Gradio.',
+        'Preparing technical documentation and project deliverables for mentor review.'
+      ],
+      skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Scikit-Learn', 'Streamlit', 'Gradio', 'Jupyter Notebook', 'Exploratory Data Analysis', 'Machine Learning']
+    },
     // =====================================================
     // 1. GENERATIVE AI INTERN - CODOMAX
     // =====================================================
